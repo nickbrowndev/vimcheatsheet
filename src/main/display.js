@@ -7,18 +7,21 @@ function displayData(data) {
     const $nav = $("#index");
     const $content = $("#content");
     $.each(data.sections, (key, section) => {
+        $nav.append($("li"));
         $nav.append($("<a>")
         .attr("href", "#"+key)
         .text(section.title));
         $content.append($("<section/>")
         .attr("id", key)
-            .append("<h2>")
-            .attr("name", key)
-            .text(section.title));
+            .append($("<h2>")
+            .text(section.title)));
     });
     $.each(data.content, (key, content) => {
-        const $content = $("<div/>");
-        $content.append("<div/>").text(content.description);
+        const $content = $("<div/>")
+        .attr("class", "contentContainer");
+        $content.append($("<div/>")
+            .attr("class", "functionDescription")
+            .text(content.description));
         $content.append(displayBinding(content.normalMode));
         $content.append(displayBinding(content.insertMode));
         $content.append(displayBinding(content.visualMode));
@@ -30,10 +33,11 @@ function displayData(data) {
 function displayBinding(binding) {
     let result;
     if (binding && binding.length) {
-        result = $("<div/>");
+        result = $("<div/>")
+        .attr("class", "keybinding");
         binding.forEach((value, i) => {
-            result.append("<kbd/>")
-            .text(value);
+            result.append($("<kbd/>")
+            .text(value));
         });
     }
     return result;
