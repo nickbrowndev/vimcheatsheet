@@ -6,16 +6,19 @@ function displayData(data) {
     const $body = $("body");
     const $nav = $("#index");
     const $content = $("#content");
+	const $navList = $("<ul>");
     $.each(data.sections, (key, section) => {
-        $nav.append($("li"));
-        $nav.append($("<a>")
+        $navList.append($("<li>").append($("<a>")
         .attr("href", "#"+key)
-        .text(section.title));
+        .text(section.title)));
         $content.append($("<section/>")
         .attr("id", key)
+		.attr("name", key)
             .append($("<h2>")
             .text(section.title)));
     });
+	$nav.append($navList);
+	
     $.each(data.content, (key, content) => {
         const $content = $("<div/>")
         .attr("class", "contentContainer");
