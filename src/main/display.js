@@ -6,16 +6,19 @@ function displayData(data) {
     const $body = $("body");
     const $nav = $("#index");
     const $content = $("#content");
+	const $navList = $("<ul>");
     $.each(data.sections, (key, section) => {
-        $nav.append($("<a>")
+        $navList.append($("<li>").append($("<a>")
         .attr("href", "#"+key)
-        .text(section.title));
+        .text(section.title)));
         $content.append($("<section/>")
         .attr("id", key)
-            .append("<h2>")
-            .attr("name", key)
-            .text(section.title));
+		.attr("name", key)
+            .append($("<h2>")
+            .text(section.title)));
     });
+	$nav.append($navList);
+	
     $.each(data.content, (key, content) => {
         const $content = $("<div/>");
         $content.append("<div/>").text(content.description);
@@ -32,8 +35,8 @@ function displayBinding(binding) {
     if (binding && binding.length) {
         result = $("<div/>");
         binding.forEach((value, i) => {
-            result.append("<kbd/>")
-            .text(value);
+            result.append($("<kbd/>")
+            .text(value));
         });
     }
     return result;
