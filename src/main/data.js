@@ -12,9 +12,6 @@ var data = {
     "Cursormovement": {
       "title": "Cursor movement"
     },
-    "TipPrefixacursormovementcommandwithanumbertorepeatitForexample4jmovesdown4lines": {
-      "title": "Tip Prefix a cursor movement command with a number to repeat it. For example, 4j moves down 4 lines."
-    },
     "InsertmodeInsertingAppendingtext": {
       "title": "Insert mode - inserting/appending text"
     },
@@ -27,14 +24,11 @@ var data = {
     "Visualcommands": {
       "title": "Visual commands"
     },
+    "switchingCase": {
+        "title": "Changing Case of Text"
+    },
     "Registers": {
       "title": "Registers"
-    },
-    "TipRegistersarebeingstoredinviminfo,andwillbeloadedagainonnextrestartofvim": {
-      "title": "Tip Registers are being stored in ~/.viminfo, and will be loaded again on next restart of vim."
-    },
-    "TipRegister0containsalwaysthevalueofthelastyankcommand": {
-      "title": "Tip Register 0 contains always the value of the last yank command."
     },
     "Marks": {
       "title": "Marks"
@@ -112,6 +106,30 @@ var data = {
   },
   {
     "sections": [
+      "cursorMovement"
+    ],
+    "description": "Move cursor up page row instead of line",
+    "normalMode": [
+      "gk"
+    ],
+    "insertMode": [],
+    "visualMode": [],
+    "visualInsertMode": []
+  },
+  {
+    "sections": [
+      "cursorMovement"
+    ],
+    "description": "Move cursor down page row instead of line",
+    "normalMode": [
+      "gj"
+    ],
+    "insertMode": [],
+    "visualMode": [],
+    "visualInsertMode": []
+  },
+  {
+    "sections": [
       "screenMovement",
       "cursorMovement"
     ],
@@ -163,7 +181,7 @@ var data = {
     "sections": [
       "Global"
     ],
-    "description": "open man page for word under the cursor",
+    "description": "open help page for word under the cursor",
     "normalMode": [
       "K"
     ],
@@ -1061,14 +1079,26 @@ var data = {
   },
   {
     "sections": [
-      "Visualcommands"
+      "Visualcommands", "switchingCase"
     ],
-    "description": "switch case",
+    "description": "Toggle case",
     "normalMode": [
-      "~"
+      "gu<movement>"
     ],
     "insertMode": [],
-    "visualMode": [],
+    "visualMode": ["~"],
+    "visualInsertMode": []
+  },
+  {
+    "sections": [
+      "Visualcommands", "switchingCase"
+    ],
+    "description": "Toggle case of entire line",
+    "normalMode": [
+      "g~~"
+    ],
+    "insertMode": [],
+    "visualMode": ["V~"],
     "visualInsertMode": []
   },
   {

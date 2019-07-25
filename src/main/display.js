@@ -1,27 +1,27 @@
 $(function() {
-  displayData(data);  
+    displayData(data);  
 });
 
 function displayData(data) {
     const $body = $("body");
     const $nav = $("#index");
     const $content = $("#content");
-	const $navList = $("<ul>");
+    const $navList = $("<ul>");
     $.each(data.sections, (key, section) => {
         $navList.append($("<li>").append($("<a>")
-        .attr("href", "#"+key)
-        .text(section.title)));
-        $content.append($("<section/>")
-        .attr("id", key)
-		.attr("name", key)
-            .append($("<h2>")
+            .attr("href", "#"+key)
             .text(section.title)));
+        $content.append($("<section/>")
+            .attr("id", key)
+            .attr("name", key)
+            .append($("<h2>")
+                .text(section.title)));
     });
-	$nav.append($navList);
-	
+    $nav.append($navList);
+
     $.each(data.content, (key, content) => {
         const $content = $("<div/>")
-        .attr("class", "contentContainer");
+            .attr("class", "contentContainer");
         $content.append($("<div/>")
             .attr("class", "functionDescription")
             .text(content.description));
@@ -37,10 +37,10 @@ function displayBinding(binding) {
     let result;
     if (binding && binding.length) {
         result = $("<div/>")
-        .attr("class", "keybinding");
+            .attr("class", "keybinding");
         binding.forEach((value, i) => {
             result.append($("<kbd/>")
-            .text(value));
+                .text(value));
         });
     }
     return result;
@@ -48,8 +48,13 @@ function displayBinding(binding) {
 
 function appendToSections(sections, $content) {
     if (sections && sections.length && content) {
-       sections.forEach((section, i) => {
-            $("#"+section).append($content.clone());
-       }) 
+        sections.forEach((section, i) => {
+            var $section = $("#" + section);
+            if (section.length) {
+                $section.append($content.clone());
+            } else {
+                console.warn("Section '" + section + "' not found");
+            }
+        }) 
     }
 }
