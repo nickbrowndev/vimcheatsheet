@@ -1,12 +1,37 @@
 body {
- 
+	font-family: sans-serif;
 }
+
+.contentContainer {
+	display: flex;
+	align-items: center;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #EFEFEF;
+	margin: 5px 20px;
+	background-color: #FAFAFA;
+	padding: 3px 10px;
+}
+
+
 .functionDescription {
     width: 25%;
-    display: inline-block;
 }
+
 .keybinding {
-    display: inline-block;
     width: 25%;
     text-align: center;
+	height: 30px;
+	flex-direction: column;
+	align-items: center;
+}
+
+.keybinding kbd {
+	border: 1px solid #C0C0C0;
+	padding: 5px 10px;
+	/*-webkit-box-shadow: 0px 2px 4px 0px #666666;
+	-moz-box-shadow: 0px 2px 4px 0px #666666;*/
+	box-shadow: 0px 2px 4px 0px #A0A0A0;
+	border-radius: 3px;
+	font-family: monospace;
 }
