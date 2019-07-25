@@ -66,6 +66,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -78,6 +79,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -90,6 +92,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -102,6 +105,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -114,6 +118,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -126,6 +131,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -139,6 +145,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -147,10 +154,12 @@ var data = {
     ],
     "description": "open help for keyword",
     "normalMode": [
-      ":help keyword"
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [
+      ":help keyword"
+    ],
     "visualInsertMode": []
   },
   {
@@ -159,10 +168,12 @@ var data = {
     ],
     "description": "save file as",
     "normalMode": [
-      ":saveas file"
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [
+      ":saveas file"
+    ],
     "visualInsertMode": []
   },
   {
@@ -171,10 +182,12 @@ var data = {
     ],
     "description": "close current pane",
     "normalMode": [
-      ":close"
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [
+      ":close"
+    ],
     "visualInsertMode": []
   },
   {
@@ -187,6 +200,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -199,6 +213,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -211,6 +226,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -223,6 +239,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -235,6 +252,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -247,6 +265,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -259,6 +278,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -271,6 +291,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -283,6 +304,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -295,6 +317,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -307,6 +330,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -319,6 +343,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -331,6 +356,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -343,6 +369,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -355,6 +382,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -367,6 +395,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -379,6 +408,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -391,6 +421,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -403,6 +434,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -415,6 +447,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -427,6 +460,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -439,6 +473,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -451,6 +486,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -463,6 +499,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -475,6 +512,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -487,6 +525,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -499,6 +538,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -511,6 +551,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -523,6 +564,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -535,6 +577,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -547,6 +590,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -559,6 +603,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -571,6 +616,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -583,6 +629,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -595,6 +642,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -607,6 +655,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -619,6 +668,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -631,6 +681,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -643,6 +694,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -655,6 +707,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -667,6 +720,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -679,6 +733,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -691,6 +746,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -703,6 +759,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -715,6 +772,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -727,6 +785,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -739,6 +798,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -751,6 +811,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -763,6 +824,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -775,6 +837,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -787,6 +850,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -799,6 +863,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -811,6 +876,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -823,6 +889,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -835,6 +902,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -847,6 +915,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -859,6 +928,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -871,6 +941,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -883,6 +954,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -895,6 +967,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -907,6 +980,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -919,6 +993,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -931,6 +1006,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -943,6 +1019,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -955,6 +1032,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -967,6 +1045,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -979,6 +1058,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -991,6 +1071,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -1003,6 +1084,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -1015,6 +1097,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -1027,6 +1110,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -1039,6 +1123,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -1051,6 +1136,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -1063,6 +1149,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -1075,6 +1162,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -1087,6 +1175,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": ["~"],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -1099,6 +1188,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": ["V~"],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -1111,6 +1201,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -1123,6 +1214,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -1135,6 +1227,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -1147,6 +1240,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -1159,6 +1253,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -1167,10 +1262,11 @@ var data = {
     ],
     "description": "jump to position of mark A",
     "normalMode": [
-      "MARKa"
+      "`a"
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -1179,10 +1275,11 @@ var data = {
     ],
     "description": "yank text to position of mark A",
     "normalMode": [
-      "yMARKa"
+      "y`a"
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -1195,6 +1292,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -1207,6 +1305,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -1219,6 +1318,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -1231,6 +1331,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -1243,6 +1344,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -1255,6 +1357,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -1267,6 +1370,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -1279,6 +1383,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -1291,6 +1396,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -1303,6 +1409,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -1315,6 +1422,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -1327,6 +1435,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -1339,6 +1448,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -1351,6 +1461,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -1363,6 +1474,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -1375,6 +1487,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -1383,10 +1496,12 @@ var data = {
     ],
     "description": "write (save) the file, but don't exit",
     "normalMode": [
-      ":w"
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [
+      ":w"
+    ],
     "visualInsertMode": []
   },
   {
@@ -1395,10 +1510,12 @@ var data = {
     ],
     "description": "write out the current file using sudo",
     "normalMode": [
-      ":w !sudo tee %"
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [
+      ":w !sudo tee %"
+    ],
     "visualInsertMode": []
   },
   {
@@ -1407,10 +1524,13 @@ var data = {
     ],
     "description": "write (save) and quit",
     "normalMode": [
-      ":wq or :x or ZZ"
+        "ZZ"
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [
+      ":wq",":x"
+    ],
     "visualInsertMode": []
   },
   {
@@ -1419,10 +1539,12 @@ var data = {
     ],
     "description": "quit (fails if there are unsaved changes)",
     "normalMode": [
-      ":q"
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [
+      ":q"
+    ],
     "visualInsertMode": []
   },
   {
@@ -1431,10 +1553,12 @@ var data = {
     ],
     "description": "quit and throw away unsaved changes",
     "normalMode": [
-      ":q! or ZQ"
+      "ZQ"
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [
+   ":q!" ],
     "visualInsertMode": []
   },
   {
@@ -1443,10 +1567,12 @@ var data = {
     ],
     "description": "write (save) and quit on all tabs",
     "normalMode": [
-      ":wqa"
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [
+      ":wqa"
+    ],
     "visualInsertMode": []
   },
   {
@@ -1459,6 +1585,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -1471,6 +1598,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -1483,6 +1611,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -1495,6 +1624,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -1507,6 +1637,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -1515,10 +1646,12 @@ var data = {
     ],
     "description": "replace all old with new throughout file",
     "normalMode": [
-      ":%s/old/new/g"
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [
+      ":%s/old/new/g"
+    ],
     "visualInsertMode": []
   },
   {
@@ -1527,10 +1660,12 @@ var data = {
     ],
     "description": "replace all old with new throughout file with confirmations",
     "normalMode": [
-      ":%s/old/new/gc"
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [
+      ":%s/old/new/gc"
+    ],
     "visualInsertMode": []
   },
   {
@@ -1539,10 +1674,12 @@ var data = {
     ],
     "description": "remove highlighting of search matches",
     "normalMode": [
-      ":noh"
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [
+      ":noh"
+    ],
     "visualInsertMode": []
   },
   {
@@ -1551,10 +1688,12 @@ var data = {
     ],
     "description": "search for pattern in multiple files",
     "normalMode": [
-      ":vimgrep /pattern/ {file}"
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [
+      ":vimgrep /pattern/ {file}"
+    ],
     "visualInsertMode": []
   },
   {
@@ -1563,10 +1702,12 @@ var data = {
     ],
     "description": "jump to the next match",
     "normalMode": [
-      ":cn"
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [
+      ":cn"
+    ],
     "visualInsertMode": []
   },
   {
@@ -1575,10 +1716,12 @@ var data = {
     ],
     "description": "jump to the previous match",
     "normalMode": [
-      ":cp"
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [
+      ":cp"
+    ],
     "visualInsertMode": []
   },
   {
@@ -1587,10 +1730,12 @@ var data = {
     ],
     "description": "open a window containing the list of matches",
     "normalMode": [
-      ":copen"
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [
+        ":vimgrep /pattern/ {file}"
+    ],
     "visualInsertMode": []
   },
   {
@@ -1599,10 +1744,12 @@ var data = {
     ],
     "description": "edit a file in a new buffer",
     "normalMode": [
-      ":e file"
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [
+      ":e file"
+    ],
     "visualInsertMode": []
   },
   {
@@ -1611,10 +1758,12 @@ var data = {
     ],
     "description": "go to the next buffer",
     "normalMode": [
-      ":bnext or :bn"
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [
+      ":bnext",":bn"
+    ],
     "visualInsertMode": []
   },
   {
@@ -1623,10 +1772,12 @@ var data = {
     ],
     "description": "go to the previous buffer",
     "normalMode": [
-      ":bprev or :bp"
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [
+      ":bprev",":bp"
+    ],
     "visualInsertMode": []
   },
   {
@@ -1635,10 +1786,12 @@ var data = {
     ],
     "description": "delete a buffer (close a file)",
     "normalMode": [
-      ":bd"
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [
+      ":bd"
+    ],
     "visualInsertMode": []
   },
   {
@@ -1647,10 +1800,12 @@ var data = {
     ],
     "description": "list all open buffers",
     "normalMode": [
-      ":ls"
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [
+      ":ls"
+    ],
     "visualInsertMode": []
   },
   {
@@ -1659,10 +1814,12 @@ var data = {
     ],
     "description": "open a file in a new buffer and split window",
     "normalMode": [
-      ":sp file"
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [
+      ":sp file"
+    ],
     "visualInsertMode": []
   },
   {
@@ -1671,10 +1828,12 @@ var data = {
     ],
     "description": "open a file in a new buffer and vertically split window",
     "normalMode": [
-      ":vsp file"
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [
+      ":vsp file"
+    ],
     "visualInsertMode": []
   },
   {
@@ -1687,6 +1846,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -1699,6 +1859,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -1711,6 +1872,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -1723,6 +1885,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -1735,6 +1898,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -1747,6 +1911,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -1759,6 +1924,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -1771,6 +1937,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -1779,10 +1946,12 @@ var data = {
     ],
     "description": "open a file in a new tab",
     "normalMode": [
-      ":tabnew or :tabnew file"
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [
+      ":tabnew",":tabnew file"
+    ],
     "visualInsertMode": []
   },
   {
@@ -1795,6 +1964,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -1803,10 +1973,12 @@ var data = {
     ],
     "description": "move to the next tab",
     "normalMode": [
-      "gt or :tabnext or :tabn"
+      "gt"
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [
+   ":tabnext",":tabn" ],
     "visualInsertMode": []
   },
   {
@@ -1815,10 +1987,12 @@ var data = {
     ],
     "description": "move to the previous tab",
     "normalMode": [
-      "gT or :tabprev or :tabp"
+      "gT"
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [
+   ":tabprev",":tabp" ],
     "visualInsertMode": []
   },
   {
@@ -1831,6 +2005,7 @@ var data = {
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [],
     "visualInsertMode": []
   },
   {
@@ -1839,10 +2014,12 @@ var data = {
     ],
     "description": "move current tab to the #th position (indexed from 0)",
     "normalMode": [
-      ":tabmove #"
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [
+      ":tabmove #"
+    ],
     "visualInsertMode": []
   },
   {
@@ -1851,10 +2028,12 @@ var data = {
     ],
     "description": "close the current tab and all its windows",
     "normalMode": [
-      ":tabclose or :tabc"
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [
+      ":tabclose",":tabc"
+   ],
     "visualInsertMode": []
   },
   {
@@ -1863,10 +2042,12 @@ var data = {
     ],
     "description": "close all tabs except for the current one",
     "normalMode": [
-      ":tabonly or :tabo"
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [
+      ":tabonly",":tabo"
+    ],
     "visualInsertMode": []
   },
   {
@@ -1875,10 +2056,12 @@ var data = {
     ],
     "description": "run the command on all tabs (e.g. :tabdo q - closes all opened tabs)",
     "normalMode": [
-      ":tabdo command"
     ],
     "insertMode": [],
     "visualMode": [],
+    "exCommand": [
+      ":tabdo command"
+    ],
     "visualInsertMode": []
   }
 ],

@@ -2,7 +2,47 @@ body {
 	font-family: sans-serif;
 }
 
-.contentContainer {
+#contentContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap
+}
+
+#index {
+    max-width: 25%;
+    flex-grow: 1;
+    flex: 1 0 30%;
+}
+
+#index ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    }
+
+#content {
+    display: flex;
+    flex-grow: 3;
+    flex-direction: column;
+    /*width: 50%;*/
+    overflow-y: scroll;
+    height: 500px;
+    flex: 1 0 70%;
+}
+
+#resources {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    flex: 1 1 100%;
+}
+
+.functionDescription {
+    display: flex;
+    width: 20%;
+}
+
+.bindingContainer {
 	display: flex;
 	align-items: center;
 	border-width: 1px;
@@ -13,16 +53,13 @@ body {
 	padding: 3px 10px;
 }
 
-
-.functionDescription {
-    width: 25%;
-}
-
 .keybinding {
-    width: 25%;
+    display: flex;
+    width: 20%;
     text-align: center;
 	height: 30px;
-	flex-direction: column;
+	flex-direction: row;
+    flex-wrap: wrap;
 	align-items: center;
 }
 
@@ -34,4 +71,6 @@ body {
 	box-shadow: 0px 2px 4px 0px #A0A0A0;
 	border-radius: 3px;
 	font-family: monospace;
+    margin: 2px 5px;
+    white-space: nowrap;
 }

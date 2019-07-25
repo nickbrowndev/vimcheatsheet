@@ -21,27 +21,29 @@ function displayData(data) {
 
     $.each(data.content, (key, content) => {
         const $content = $("<div/>")
-            .attr("class", "contentContainer");
+            .attr("class", "bindingContainer");
         $content.append($("<div/>")
             .attr("class", "functionDescription")
             .text(content.description));
         $content.append(displayBinding(content.normalMode));
         $content.append(displayBinding(content.insertMode));
+        $content.append(displayBinding(content.exCommand));
         $content.append(displayBinding(content.visualMode));
-        $content.append(displayBinding(content.visualInsertMode));
+        //$content.append(displayBinding(content.visualInsertMode));
         appendToSections(content.sections, $content);
     })
 }
 
 function displayBinding(binding) {
     let result;
+    result = $("<div/>").attr("class", "keybinding");
     if (binding && binding.length) {
-        result = $("<div/>")
-            .attr("class", "keybinding");
         binding.forEach((value, i) => {
             result.append($("<kbd/>")
                 .text(value));
         });
+    } else {
+        result.html("&nbsp;");
     }
     return result;
 }
