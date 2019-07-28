@@ -8,14 +8,26 @@ function displayData(data) {
     const $content = $("#content");
     const $navList = $("<ul>");
     $.each(data.sections, (key, section) => {
-        $navList.append($("<li>").append($("<a>")
-            .attr("href", "#"+key)
-            .text(section.title)));
-        $content.append($("<section/>")
+        var $listContent = generateListContent(key, section);
+        $navList.append($listContent);
+
+        var $parentElement;
+        var headerType;
+        if ("parent" in section) {
+            $parentElement = $("#" + section.parent);
+            headerType = "h3";
+        } else {
+            $parentElement = $content;
+            headerType = "h2";
+        }
+        var $section = $("<section/>")
             .attr("id", key)
             .attr("name", key)
-            .append($("<h2>")
-                .text(section.title)));
+            .append($("<" + headerType + "/>")
+                .text(section.title))
+            .append($("<div/>").addClass("content"));
+        $section.hide();
+        $parentElement.append($section);
     });
     $nav.append($navList);
 
@@ -32,6 +44,38 @@ function displayData(data) {
         //$content.append(displayBinding(content.visualInsertMode));
         appendToSections(content.sections, $content);
     })
+}
+
+function generateListContent(key, section) {
+
+    var $listElement = $("<li/>").append($("<p/>").text(section.title));
+    $listElement.click(function() {
+        $("#index li").removeClass("selected");
+        showSection(key); 
+        $(this).addClass("selected");
+    });
+    var $ListElementContent;
+
+    if (section.link || section.text) {
+        $listElementContent = $("<div/>").addClass("additionalContent");
+        if (section.link) {
+            var $link = $("<a/>").attr("href", section.link).attr("target", "_blank");
+            $link.text("Further Information");
+            $listElementContent.append($link);
+        }
+        if (section.text) {
+            $listElementContent.append($("<p/>").text(section.text));
+        }
+        $listElement.append($listElementContent);
+    }   
+    return $listElement;
+}
+
+function showSection(key) {
+    $("#content section").hide();
+    var $section = $("#content #"+key);
+    $section.parent("section").show();
+    $section.show();
 }
 
 function displayBinding(binding) {
@@ -51,7 +95,7 @@ function displayBinding(binding) {
 function appendToSections(sections, $content) {
     if (sections && sections.length && content) {
         sections.forEach((section, i) => {
-            var $section = $("#" + section);
+            var $section = $("#" + section + " > .content");
             if (section.length) {
                 $section.append($content.clone());
             } else {

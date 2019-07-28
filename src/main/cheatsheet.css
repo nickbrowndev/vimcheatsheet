@@ -9,6 +9,7 @@ body {
 }
 
 #index {
+    display: flex;
     max-width: 25%;
     flex-grow: 1;
     flex: 1 0 30%;
@@ -17,17 +18,57 @@ body {
 #index ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    flex-direction: column;
     margin: 0;
-    }
+}
+
+#index ul li {
+    padding: 2px 5px;
+    display: flex;
+    background-color: #D0D0D0;
+    border: 2px solid ;
+    border-color: #A0A0A0;
+    border-top-width:-0px;
+    flex-direction: column;
+}
+
+#index ul li:first-child {
+    border-top-width: 2px;
+}
+
+#index ul li:hover {
+    background-color: #E0E0E0;
+}
+
+#index ul li p {
+    margin: 0.5em;
+}
+
+#index ul li.selected {
+    background-color: white;
+    border-right-width: 0px;
+}
+
+#index ul li:not(.selected) .additionalContent {
+    display: none;
+}
+
+
+#index ul li .additionalContent {
+    display: flex;
+    flex-direction: column;
+}
 
 #content {
     display: flex;
     flex-grow: 3;
     flex-direction: column;
     /*width: 50%;*/
-    overflow-y: scroll;
-    height: 500px;
+    overflow-y: auto;
+    /*height: 500px;*/
     flex: 1 0 70%;
+    padding: 0 10px;
 }
 
 #resources {
@@ -39,7 +80,7 @@ body {
 
 .functionDescription {
     display: flex;
-    width: 20%;
+    width: 40%;
 }
 
 .bindingContainer {
@@ -55,9 +96,8 @@ body {
 
 .keybinding {
     display: flex;
-    width: 20%;
+    width: 15%;
     text-align: center;
-	height: 30px;
 	flex-direction: row;
     flex-wrap: wrap;
 	align-items: center;

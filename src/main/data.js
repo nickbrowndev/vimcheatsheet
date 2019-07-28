@@ -1,10 +1,38 @@
 var data = {
   "sections": {
+    "movement": {
+        "title": "Movement"
+    },
     "cursorMovement": {
+      "parent": "movement",
       "title": "Cursor Movement"
     },
-    "screenMovement": {
-      "title": "Screen Movement"
+    "pageMovement": {
+        "parent": "movement",
+        "title": "Page Movement"
+    },
+    "textObjectMovement": {
+        "parent": "movement",
+        "title": "Text Object"
+    },
+    "scrollScreen": {
+      "parent": "movement",
+      "title": "Screen Scrolling"
+    },
+    "linewiseSearching": {
+      "title": "Linewise Searching"
+    },
+    "searchReplace": {
+      "title": "Search and Replace",
+      "link": "https://vim.fandom.com/wiki/Searching"
+    },
+    "help": {
+      "title": "Help",
+      "text": "Learn some help stuff, innit",
+      "link": "https://vim.fandom.com/wiki/Learn_to_use_help"
+    },
+    "break": {
+        "title": "BREAK"
     },
     "Global": {
       "title": "Global"
@@ -136,8 +164,7 @@ var data = {
   },
   {
     "sections": [
-      "screenMovement",
-      "cursorMovement"
+      "scrollScreen"
     ],
     "description": "Move screen down one line",
     "normalMode": [
@@ -150,7 +177,7 @@ var data = {
   },
   {
     "sections": [
-      "Global"
+      "help", "Global"
     ],
     "description": "open help for keyword",
     "normalMode": [
@@ -158,7 +185,21 @@ var data = {
     "insertMode": [],
     "visualMode": [],
     "exCommand": [
-      ":help keyword"
+      ":help keyword", ":h"
+    ],
+    "visualInsertMode": []
+  },
+  {
+    "sections": [
+      "help"
+    ],
+    "description": "search help",
+    "normalMode": [
+    ],
+    "insertMode": [],
+    "visualMode": [],
+    "exCommand": [
+      ":helpgrep pattern"
     ],
     "visualInsertMode": []
   },
@@ -192,7 +233,7 @@ var data = {
   },
   {
     "sections": [
-      "Global"
+      "help", "Global"
     ],
     "description": "open help page for word under the cursor",
     "normalMode": [
@@ -205,59 +246,7 @@ var data = {
   },
   {
     "sections": [
-      "Cursormovement"
-    ],
-    "description": "move cursor left",
-    "normalMode": [
-      "h"
-    ],
-    "insertMode": [],
-    "visualMode": [],
-    "exCommand": [],
-    "visualInsertMode": []
-  },
-  {
-    "sections": [
-      "Cursormovement"
-    ],
-    "description": "move cursor down",
-    "normalMode": [
-      "j"
-    ],
-    "insertMode": [],
-    "visualMode": [],
-    "exCommand": [],
-    "visualInsertMode": []
-  },
-  {
-    "sections": [
-      "Cursormovement"
-    ],
-    "description": "move cursor up",
-    "normalMode": [
-      "k"
-    ],
-    "insertMode": [],
-    "visualMode": [],
-    "exCommand": [],
-    "visualInsertMode": []
-  },
-  {
-    "sections": [
-      "Cursormovement"
-    ],
-    "description": "move cursor right",
-    "normalMode": [
-      "l"
-    ],
-    "insertMode": [],
-    "visualMode": [],
-    "exCommand": [],
-    "visualInsertMode": []
-  },
-  {
-    "sections": [
-      "Cursormovement"
+      "cursorMovement"
     ],
     "description": "move to top of screen",
     "normalMode": [
@@ -270,7 +259,7 @@ var data = {
   },
   {
     "sections": [
-      "Cursormovement"
+      "cursorMovement"
     ],
     "description": "move to middle of screen",
     "normalMode": [
@@ -283,7 +272,7 @@ var data = {
   },
   {
     "sections": [
-      "Cursormovement"
+      "cursorMovement"
     ],
     "description": "move to bottom of screen",
     "normalMode": [
@@ -296,7 +285,7 @@ var data = {
   },
   {
     "sections": [
-      "Cursormovement"
+      "textObjectMovement"
     ],
     "description": "jump forwards to the start of a word",
     "normalMode": [
@@ -309,7 +298,7 @@ var data = {
   },
   {
     "sections": [
-      "Cursormovement"
+      "textObjectMovement"
     ],
     "description": "jump forwards to the start of a word (words can contain punctuation)",
     "normalMode": [
@@ -322,7 +311,7 @@ var data = {
   },
   {
     "sections": [
-      "Cursormovement"
+      "textObjectMovement"
     ],
     "description": "jump forwards to the end of a word",
     "normalMode": [
@@ -335,7 +324,7 @@ var data = {
   },
   {
     "sections": [
-      "Cursormovement"
+      "textObjectMovement"
     ],
     "description": "jump forwards to the end of a word (words can contain punctuation)",
     "normalMode": [
@@ -348,7 +337,7 @@ var data = {
   },
   {
     "sections": [
-      "Cursormovement"
+      "textObjectMovement"
     ],
     "description": "jump backwards to the start of a word",
     "normalMode": [
@@ -361,7 +350,7 @@ var data = {
   },
   {
     "sections": [
-      "Cursormovement"
+      "textObjectMovement"
     ],
     "description": "jump backwards to the start of a word (words can contain punctuation)",
     "normalMode": [
@@ -374,7 +363,7 @@ var data = {
   },
   {
     "sections": [
-      "Cursormovement"
+      "textObjectMovement"
     ],
     "description": "move to matching character (default supported pairs: '()', '{}', '[]' > use <code>:h matchpairs</code> in vim for more info)",
     "normalMode": [
@@ -387,7 +376,7 @@ var data = {
   },
   {
     "sections": [
-      "Cursormovement"
+      "textObjectMovement"
     ],
     "description": "jump to the start of the line",
     "normalMode": [
@@ -400,11 +389,11 @@ var data = {
   },
   {
     "sections": [
-      "Cursormovement"
+      "textObjectMovement"
     ],
-    "description": "jump to the first non-blank character of the line",
+    "description": "jump to the first non-blank character of the line, or nth line",
     "normalMode": [
-      "^"
+      "^", "_", "n_"
     ],
     "insertMode": [],
     "visualMode": [],
@@ -413,7 +402,7 @@ var data = {
   },
   {
     "sections": [
-      "Cursormovement"
+      "textObjectMovement"
     ],
     "description": "jump to the end of the line",
     "normalMode": [
@@ -426,7 +415,7 @@ var data = {
   },
   {
     "sections": [
-      "Cursormovement"
+      "textObjectMovement"
     ],
     "description": "jump to the last non-blank character of the line",
     "normalMode": [
@@ -439,7 +428,7 @@ var data = {
   },
   {
     "sections": [
-      "Cursormovement"
+      "pageMovement"
     ],
     "description": "go to the first line of the document",
     "normalMode": [
@@ -452,7 +441,7 @@ var data = {
   },
   {
     "sections": [
-      "Cursormovement"
+      "pageMovement"
     ],
     "description": "go to the last line of the document",
     "normalMode": [
@@ -465,20 +454,18 @@ var data = {
   },
   {
     "sections": [
-      "Cursormovement"
+      "pageMovement"
     ],
-    "description": "go to line 5",
-    "normalMode": [
-      "5G"
-    ],
+    "description": "go to line n",
+    "normalMode": [ "nG" ],
     "insertMode": [],
     "visualMode": [],
-    "exCommand": [],
+    "exCommand": [":n"],
     "visualInsertMode": []
   },
   {
     "sections": [
-      "Cursormovement"
+      "cursorMovement", "linewiseSearching"
     ],
     "description": "jump to next occurrence of character x",
     "normalMode": [
@@ -491,7 +478,7 @@ var data = {
   },
   {
     "sections": [
-      "Cursormovement"
+      "cursorMovement", "linewiseSearching"
     ],
     "description": "jump to before next occurrence of character x",
     "normalMode": [
@@ -504,7 +491,7 @@ var data = {
   },
   {
     "sections": [
-      "Cursormovement"
+      "cursorMovement", "linewiseSearching"
     ],
     "description": "jump to previous occurence of character x",
     "normalMode": [
@@ -517,7 +504,7 @@ var data = {
   },
   {
     "sections": [
-      "Cursormovement"
+      "cursorMovement", "linewiseSearching"
     ],
     "description": "jump to after previous occurence of character x",
     "normalMode": [
@@ -530,7 +517,7 @@ var data = {
   },
   {
     "sections": [
-      "Cursormovement"
+      "cursorMovement", "linewiseSearching"
     ],
     "description": "repeat previous f, t, F or T movement",
     "normalMode": [
@@ -543,7 +530,7 @@ var data = {
   },
   {
     "sections": [
-      "Cursormovement"
+      "cursorMovement", "linewiseSearching"
     ],
     "description": "repeat previous f, t, F or T movement, backwards",
     "normalMode": [
@@ -556,7 +543,32 @@ var data = {
   },
   {
     "sections": [
-      "Cursormovement"
+      "cursorMovement", "linewiseSearching"
+    ],
+    "description": "repeat previous f, t, F or T movement, backwards",
+    "normalMode": [
+      ","
+    ],
+    "insertMode": [],
+    "visualMode": [],
+    "exCommand": [],
+    "visualInsertMode": []
+  },
+  {
+    "sections": [
+      "searchReplace"
+    ],
+    "description": "list all lines contain pattern",
+    "normalMode": [
+    ],
+    "insertMode": [],
+    "visualMode": [],
+    "exCommand": [":g pattern"],
+    "visualInsertMode": []
+  },
+  {
+    "sections": [
+      "textObjectMovement"
     ],
     "description": "jump to next paragraph (or function/block, when editing code)",
     "normalMode": [
@@ -569,7 +581,7 @@ var data = {
   },
   {
     "sections": [
-      "Cursormovement"
+      "textObjectMovement"
     ],
     "description": "jump to previous paragraph (or function/block, when editing code)",
     "normalMode": [
@@ -582,7 +594,21 @@ var data = {
   },
   {
     "sections": [
-      "Cursormovement"
+      "scrollScreen"
+    ],
+    "description": "move cursor line to top of screen",
+    "detail": "zt keeps the cursor in the same column. z<CR> moves to start of line.",
+    "normalMode": [
+      "zt", "z<CR>"
+    ],
+    "insertMode": [],
+    "visualMode": [],
+    "exCommand": [],
+    "visualInsertMode": []
+  },
+  {
+    "sections": [
+      "scrollScreen"
     ],
     "description": "center cursor on screen",
     "normalMode": [
@@ -595,7 +621,20 @@ var data = {
   },
   {
     "sections": [
-      "Cursormovement"
+      "scrollScreen"
+    ],
+    "description": "move cursor to bottom of screen",
+    "normalMode": [
+      "zb", "z-"
+    ],
+    "insertMode": [],
+    "visualMode": [],
+    "exCommand": [],
+    "visualInsertMode": []
+  },
+  {
+    "sections": [
+      "scrollScreen"
     ],
     "description": "move screen down one line (without moving cursor)",
     "normalMode": [
@@ -608,7 +647,7 @@ var data = {
   },
   {
     "sections": [
-      "Cursormovement"
+      "scrollScreen"
     ],
     "description": "move screen up one line (without moving cursor)",
     "normalMode": [
@@ -621,9 +660,9 @@ var data = {
   },
   {
     "sections": [
-      "Cursormovement"
+      "scrollScreen", "cursorMovement"
     ],
-    "description": "move back one full screen",
+    "description": "move backward one full screen", 
     "normalMode": [
       "Ctrl + b"
     ],
@@ -634,7 +673,7 @@ var data = {
   },
   {
     "sections": [
-      "Cursormovement"
+      "scrollScreen", "cursorMovement"
     ],
     "description": "move forward one full screen",
     "normalMode": [
@@ -647,7 +686,7 @@ var data = {
   },
   {
     "sections": [
-      "Cursormovement"
+      "scrollScreen", "cursorMovement"
     ],
     "description": "move forward 1/2 a screen",
     "normalMode": [
@@ -660,7 +699,7 @@ var data = {
   },
   {
     "sections": [
-      "Cursormovement"
+      "scrollScreen", "cursorMovement"
     ],
     "description": "move back 1/2 a screen",
     "normalMode": [
@@ -1420,7 +1459,7 @@ var data = {
     "normalMode": [
       "dd"
     ],
-    "insertMode": [],
+    "insertMode": ["<c-u>"],
     "visualMode": [],
     "exCommand": [],
     "visualInsertMode": []
@@ -1443,10 +1482,23 @@ var data = {
       "Cutandpaste"
     ],
     "description": "delete (cut) the characters of the word from the cursor position to the start of the next word",
-    "normalMode": [
+    "rmalMode": [
       "dw"
     ],
     "insertMode": [],
+    "visualMode": [],
+    "exCommand": [],
+    "visualInsertMode": []
+  },
+  {
+    "sections": [
+      "Cutandpaste"
+    ],
+    "description": "delete (cut) characters from cursor position to beginning of word",
+    "rmalMode": [
+      "db"
+    ],
+    "insertMode": ["<c-w>"],
     "visualMode": [],
     "exCommand": [],
     "visualInsertMode": []
