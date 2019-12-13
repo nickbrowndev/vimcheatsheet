@@ -1482,7 +1482,7 @@ var data = {
       "Cutandpaste"
     ],
     "description": "delete (cut) the characters of the word from the cursor position to the start of the next word",
-    "rmalMode": [
+    "normalMode": [
       "dw"
     ],
     "insertMode": [],
@@ -1495,7 +1495,7 @@ var data = {
       "Cutandpaste"
     ],
     "description": "delete (cut) characters from cursor position to beginning of word",
-    "rmalMode": [
+    "normalMode": [
       "db"
     ],
     "insertMode": ["<c-w>"],
@@ -2117,4 +2117,4 @@ var data = {
     "visualInsertMode": []
   }
 ],
-}
+};

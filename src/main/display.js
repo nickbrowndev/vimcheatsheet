@@ -2,6 +2,16 @@ $(function() {
     displayData(data);  
 });
 
+function clearData() {
+    const $nav = $("#index").empty();
+    const $content = $("#content").empty();
+}
+
+function refreshData() {
+    clearData();
+    displayData(data);
+}
+
 function displayData(data) {
     const $body = $("body");
     const $nav = $("#index");
