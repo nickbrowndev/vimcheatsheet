@@ -31,23 +31,39 @@ var data = {
       "text": "Learn some help stuff, innit",
       "link": "https://vim.fandom.com/wiki/Learn_to_use_help"
     },
+    "buffers": {
+        "title": "Buffers"
+    },
+    "motions": {
+        "title": "Motions",
+        "link": "http://vimdoc.sourceforge.net/htmldoc/motion.html"
+    },
+    "horizontalMotions": {
+        "parent": "motions",
+        "title": "Horizontal"
+    },
+    "verticalMotions": {
+        "parent": "motions",
+        "title": "Vertical"
+    },
+    "inserting": {
+      "title": "Inserting"
+    },
+    "editing": {
+        "title": "Editing"
+        },
+    "formatting": {
+        "title": "Formatting",
+        "text": ":h gq, :h gw, :h fo (format options), :h fp (format program), :h fo-table"
+    },
+    "visualMode": {
+      "title": "Visual Mode"
+    },
     "break": {
         "title": "BREAK"
     },
     "Global": {
       "title": "Global"
-    },
-    "Cursormovement": {
-      "title": "Cursor movement"
-    },
-    "InsertmodeInsertingAppendingtext": {
-      "title": "Insert mode - inserting/appending text"
-    },
-    "Editing": {
-      "title": "Editing"
-    },
-    "MarkingtextVisualmode": {
-      "title": "Marking text (visual mode)"
     },
     "Visualcommands": {
       "title": "Visual commands"
@@ -205,7 +221,7 @@ var data = {
   },
   {
     "sections": [
-      "Global"
+      "buffers"
     ],
     "description": "save file as",
     "normalMode": [
@@ -712,7 +728,7 @@ var data = {
   },
   {
     "sections": [
-      "InsertmodeInsertingAppendingtext"
+      "inserting"
     ],
     "description": "insert before the cursor",
     "normalMode": [
@@ -725,7 +741,7 @@ var data = {
   },
   {
     "sections": [
-      "InsertmodeInsertingAppendingtext"
+      "inserting"
     ],
     "description": "insert at the beginning of the line",
     "normalMode": [
@@ -738,7 +754,7 @@ var data = {
   },
   {
     "sections": [
-      "InsertmodeInsertingAppendingtext"
+      "inserting"
     ],
     "description": "insert (append) after the cursor",
     "normalMode": [
@@ -751,7 +767,7 @@ var data = {
   },
   {
     "sections": [
-      "InsertmodeInsertingAppendingtext"
+      "inserting"
     ],
     "description": "insert (append) at the end of the line",
     "normalMode": [
@@ -764,7 +780,7 @@ var data = {
   },
   {
     "sections": [
-      "InsertmodeInsertingAppendingtext"
+      "inserting"
     ],
     "description": "append (open) a new line below the current line",
     "normalMode": [
@@ -777,7 +793,7 @@ var data = {
   },
   {
     "sections": [
-      "InsertmodeInsertingAppendingtext"
+      "inserting"
     ],
     "description": "append (open) a new line above the current line",
     "normalMode": [
@@ -790,7 +806,7 @@ var data = {
   },
   {
     "sections": [
-      "InsertmodeInsertingAppendingtext"
+      "inserting"
     ],
     "description": "insert (append) at the end of the word",
     "normalMode": [
@@ -803,11 +819,12 @@ var data = {
   },
   {
     "sections": [
-      "InsertmodeInsertingAppendingtext"
+      "inserting"
     ],
     "description": "exit insert mode",
+    "link": "https://vim.fandom.com/wiki/Avoid_the_escape_key",
     "normalMode": [
-      "Esc"
+      "Esc", "<C-[>", "<C-c>"
     ],
     "insertMode": [],
     "visualMode": [],
@@ -816,7 +833,7 @@ var data = {
   },
   {
     "sections": [
-      "Editing"
+      "editing"
     ],
     "description": "replace a single character",
     "normalMode": [
@@ -829,7 +846,7 @@ var data = {
   },
   {
     "sections": [
-      "Editing"
+      "editing"
     ],
     "description": "join line below to the current one with one space in between",
     "normalMode": [
@@ -842,7 +859,7 @@ var data = {
   },
   {
     "sections": [
-      "Editing"
+      "editing"
     ],
     "description": "join line below to the current one without space in between",
     "normalMode": [
@@ -855,7 +872,7 @@ var data = {
   },
   {
     "sections": [
-      "Editing"
+      "formatting"
     ],
     "description": "reflow paragraph",
     "normalMode": [
@@ -868,7 +885,7 @@ var data = {
   },
   {
     "sections": [
-      "Editing"
+      "editing"
     ],
     "description": "change (replace) entire line",
     "normalMode": [
@@ -881,7 +898,7 @@ var data = {
   },
   {
     "sections": [
-      "Editing"
+      "editing"
     ],
     "description": "change (replace) to the end of the line",
     "normalMode": [
@@ -894,7 +911,7 @@ var data = {
   },
   {
     "sections": [
-      "Editing"
+      "editing"
     ],
     "description": "change (replace) to the end of the line",
     "normalMode": [
@@ -907,7 +924,7 @@ var data = {
   },
   {
     "sections": [
-      "Editing"
+      "editing"
     ],
     "description": "change (replace) entire word",
     "normalMode": [
@@ -920,7 +937,7 @@ var data = {
   },
   {
     "sections": [
-      "Editing"
+      "editing"
     ],
     "description": "change (replace) to the end of the word",
     "normalMode": [
@@ -933,7 +950,7 @@ var data = {
   },
   {
     "sections": [
-      "Editing"
+      "editing"
     ],
     "description": "delete character and substitute text",
     "normalMode": [
@@ -946,7 +963,7 @@ var data = {
   },
   {
     "sections": [
-      "Editing"
+      "editing"
     ],
     "description": "delete line and substitute text (same as cc)",
     "normalMode": [
@@ -959,7 +976,7 @@ var data = {
   },
   {
     "sections": [
-      "Editing"
+      "editing"
     ],
     "description": "transpose two letters (delete and paste)",
     "normalMode": [
@@ -972,7 +989,7 @@ var data = {
   },
   {
     "sections": [
-      "Editing"
+      "editing"
     ],
     "description": "undo",
     "normalMode": [
@@ -985,7 +1002,7 @@ var data = {
   },
   {
     "sections": [
-      "Editing"
+      "editing"
     ],
     "description": "redo",
     "normalMode": [
@@ -998,7 +1015,7 @@ var data = {
   },
   {
     "sections": [
-      "Editing"
+      "editing"
     ],
     "description": "repeat last command",
     "normalMode": [
@@ -1011,7 +1028,7 @@ var data = {
   },
   {
     "sections": [
-      "MarkingtextVisualmode"
+      "visualMode"
     ],
     "description": "start visual mode, mark lines, then do a command (like y-yank)",
     "normalMode": [
@@ -1024,7 +1041,7 @@ var data = {
   },
   {
     "sections": [
-      "MarkingtextVisualmode"
+      "visualMode"
     ],
     "description": "start linewise visual mode",
     "normalMode": [
@@ -1037,7 +1054,7 @@ var data = {
   },
   {
     "sections": [
-      "MarkingtextVisualmode"
+      "visualMode"
     ],
     "description": "move to other end of marked area",
     "normalMode": [
@@ -1050,7 +1067,7 @@ var data = {
   },
   {
     "sections": [
-      "MarkingtextVisualmode"
+      "visualMode"
     ],
     "description": "start visual block mode",
     "normalMode": [
@@ -1063,7 +1080,7 @@ var data = {
   },
   {
     "sections": [
-      "MarkingtextVisualmode"
+      "visualMode"
     ],
     "description": "move to other corner of block",
     "normalMode": [
@@ -1076,7 +1093,7 @@ var data = {
   },
   {
     "sections": [
-      "MarkingtextVisualmode"
+      "visualMode"
     ],
     "description": "mark a word",
     "normalMode": [
@@ -1089,7 +1106,7 @@ var data = {
   },
   {
     "sections": [
-      "MarkingtextVisualmode"
+      "visualMode"
     ],
     "description": "a block with ()",
     "normalMode": [
@@ -1102,7 +1119,7 @@ var data = {
   },
   {
     "sections": [
-      "MarkingtextVisualmode"
+      "visualMode"
     ],
     "description": "a block with {}",
     "normalMode": [
@@ -1115,7 +1132,7 @@ var data = {
   },
   {
     "sections": [
-      "MarkingtextVisualmode"
+      "visualMode"
     ],
     "description": "inner block with ()",
     "normalMode": [
@@ -1128,7 +1145,7 @@ var data = {
   },
   {
     "sections": [
-      "MarkingtextVisualmode"
+      "visualMode"
     ],
     "description": "inner block with {}",
     "normalMode": [
@@ -1141,7 +1158,7 @@ var data = {
   },
   {
     "sections": [
-      "MarkingtextVisualmode"
+      "visualMode"
     ],
     "description": "exit visual mode",
     "normalMode": [
