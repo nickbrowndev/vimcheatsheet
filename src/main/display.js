@@ -58,7 +58,7 @@ function displayData(data) {
 
 function generateListContent(key, section) {
 
-    var $listElement = $("<li/>").append($("<p/>").text(section.title));
+    var $listElement = $("<li/>").append($("<p/>").text(("parent" in section ? " > " : "") + section.title));
     $listElement.click(function() {
         $("#index li").removeClass("selected");
         showSection(key); 

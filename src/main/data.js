@@ -1,4 +1,4 @@
-var data = {
+let data = {
   "sections": {
     "movement": {
         "title": "Movement"
@@ -195,7 +195,7 @@ var data = {
     "sections": [
       "help", "Global"
     ],
-    "description": "open help for keyword",
+    "description": "Open help for keyword",
     "normalMode": [
     ],
     "insertMode": [],
@@ -209,7 +209,7 @@ var data = {
     "sections": [
       "help"
     ],
-    "description": "search help",
+    "description": "Search help",
     "normalMode": [
     ],
     "insertMode": [],
@@ -223,7 +223,7 @@ var data = {
     "sections": [
       "buffers"
     ],
-    "description": "save file as",
+    "description": "Save file as",
     "normalMode": [
     ],
     "insertMode": [],
@@ -237,7 +237,7 @@ var data = {
     "sections": [
       "Global"
     ],
-    "description": "close current pane",
+    "description": "Close current pane",
     "normalMode": [
     ],
     "insertMode": [],
@@ -251,7 +251,7 @@ var data = {
     "sections": [
       "help", "Global"
     ],
-    "description": "open help page for word under the cursor",
+    "description": "Open help page for word under the cursor",
     "normalMode": [
       "K"
     ],
@@ -264,7 +264,7 @@ var data = {
     "sections": [
       "cursorMovement"
     ],
-    "description": "move to top of screen",
+    "description": "Move to top of screen",
     "normalMode": [
       "H"
     ],
@@ -277,7 +277,7 @@ var data = {
     "sections": [
       "cursorMovement"
     ],
-    "description": "move to middle of screen",
+    "description": "Move to middle of screen",
     "normalMode": [
       "M"
     ],
@@ -290,7 +290,7 @@ var data = {
     "sections": [
       "cursorMovement"
     ],
-    "description": "move to bottom of screen",
+    "description": "Move to bottom of screen",
     "normalMode": [
       "L"
     ],
@@ -303,7 +303,7 @@ var data = {
     "sections": [
       "textObjectMovement"
     ],
-    "description": "jump forwards to the start of a word",
+    "description": "Jump forwards to the start of a word",
     "normalMode": [
       "w"
     ],
@@ -316,7 +316,7 @@ var data = {
     "sections": [
       "textObjectMovement"
     ],
-    "description": "jump forwards to the start of a word (words can contain punctuation)",
+    "description": "Jump forwards to the start of a word (words can contain punctuation)",
     "normalMode": [
       "W"
     ],
@@ -329,7 +329,7 @@ var data = {
     "sections": [
       "textObjectMovement"
     ],
-    "description": "jump forwards to the end of a word",
+    "description": "Jump forwards to the end of a word",
     "normalMode": [
       "e"
     ],
@@ -342,7 +342,7 @@ var data = {
     "sections": [
       "textObjectMovement"
     ],
-    "description": "jump forwards to the end of a word (words can contain punctuation)",
+    "description": "Jump forwards to the end of a word (words can contain punctuation)",
     "normalMode": [
       "E"
     ],
@@ -355,7 +355,7 @@ var data = {
     "sections": [
       "textObjectMovement"
     ],
-    "description": "jump backwards to the start of a word",
+    "description": "Jump backwards to the start of a word",
     "normalMode": [
       "b"
     ],
@@ -368,7 +368,7 @@ var data = {
     "sections": [
       "textObjectMovement"
     ],
-    "description": "jump backwards to the start of a word (words can contain punctuation)",
+    "description": "Jump backwards to the start of a word (words can contain punctuation)",
     "normalMode": [
       "B"
     ],
@@ -381,7 +381,7 @@ var data = {
     "sections": [
       "textObjectMovement"
     ],
-    "description": "move to matching character (default supported pairs: '()', '{}', '[]' > use <code>:h matchpairs</code> in vim for more info)",
+    "description": "Move to matching character (default supported pairs: '()', '{}', '[]' > use <code>:h matchpairs</code> in vim for more info)",
     "normalMode": [
       "%"
     ],
@@ -394,7 +394,7 @@ var data = {
     "sections": [
       "textObjectMovement"
     ],
-    "description": "jump to the start of the line",
+    "description": "Jump to the start of the line",
     "normalMode": [
       "0"
     ],
@@ -407,7 +407,7 @@ var data = {
     "sections": [
       "textObjectMovement"
     ],
-    "description": "jump to the first non-blank character of the line, or nth line",
+    "description": "Jump to the first non-blank character of the line, or nth line",
     "normalMode": [
       "^", "_", "n_"
     ],
@@ -420,7 +420,7 @@ var data = {
     "sections": [
       "textObjectMovement"
     ],
-    "description": "jump to the end of the line",
+    "description": "Jump to the end of the line",
     "normalMode": [
       "$"
     ],
@@ -433,7 +433,7 @@ var data = {
     "sections": [
       "textObjectMovement"
     ],
-    "description": "jump to the last non-blank character of the line",
+    "description": "Jump to the last non-blank character of the line",
     "normalMode": [
       "g_"
     ],
@@ -446,7 +446,7 @@ var data = {
     "sections": [
       "pageMovement"
     ],
-    "description": "go to the first line of the document",
+    "description": "Go to the first line of the document",
     "normalMode": [
       "gg"
     ],
@@ -459,7 +459,7 @@ var data = {
     "sections": [
       "pageMovement"
     ],
-    "description": "go to the last line of the document",
+    "description": "Go to the last line of the document",
     "normalMode": [
       "G"
     ],
@@ -472,7 +472,7 @@ var data = {
     "sections": [
       "pageMovement"
     ],
-    "description": "go to line n",
+    "description": "Go to line n",
     "normalMode": [ "nG" ],
     "insertMode": [],
     "visualMode": [],
@@ -483,7 +483,7 @@ var data = {
     "sections": [
       "cursorMovement", "linewiseSearching"
     ],
-    "description": "jump to next occurrence of character x",
+    "description": "Jump to next occurrence of character x",
     "normalMode": [
       "fx"
     ],
@@ -496,7 +496,7 @@ var data = {
     "sections": [
       "cursorMovement", "linewiseSearching"
     ],
-    "description": "jump to before next occurrence of character x",
+    "description": "Jump to before next occurrence of character x",
     "normalMode": [
       "tx"
     ],
@@ -509,7 +509,7 @@ var data = {
     "sections": [
       "cursorMovement", "linewiseSearching"
     ],
-    "description": "jump to previous occurence of character x",
+    "description": "Jump to previous occurence of character x",
     "normalMode": [
       "Fx"
     ],
@@ -522,7 +522,7 @@ var data = {
     "sections": [
       "cursorMovement", "linewiseSearching"
     ],
-    "description": "jump to after previous occurence of character x",
+    "description": "Jump to after previous occurence of character x",
     "normalMode": [
       "Tx"
     ],
@@ -535,7 +535,7 @@ var data = {
     "sections": [
       "cursorMovement", "linewiseSearching"
     ],
-    "description": "repeat previous f, t, F or T movement",
+    "description": "Repeat previous f, t, F or T movement",
     "normalMode": [
       ";"
     ],
@@ -548,7 +548,7 @@ var data = {
     "sections": [
       "cursorMovement", "linewiseSearching"
     ],
-    "description": "repeat previous f, t, F or T movement, backwards",
+    "description": "Repeat previous f, t, F or T movement, backwards",
     "normalMode": [
       ","
     ],
@@ -561,7 +561,7 @@ var data = {
     "sections": [
       "cursorMovement", "linewiseSearching"
     ],
-    "description": "repeat previous f, t, F or T movement, backwards",
+    "description": "Repeat previous f, t, F or T movement, backwards",
     "normalMode": [
       ","
     ],
@@ -574,7 +574,7 @@ var data = {
     "sections": [
       "searchReplace"
     ],
-    "description": "list all lines contain pattern",
+    "description": "List all lines containing pattern",
     "normalMode": [
     ],
     "insertMode": [],
@@ -586,7 +586,7 @@ var data = {
     "sections": [
       "textObjectMovement"
     ],
-    "description": "jump to next paragraph (or function/block, when editing code)",
+    "description": "Jump to next paragraph (or function/block, when editing code)",
     "normalMode": [
       "}"
     ],
@@ -599,7 +599,7 @@ var data = {
     "sections": [
       "textObjectMovement"
     ],
-    "description": "jump to previous paragraph (or function/block, when editing code)",
+    "description": "Jump to previous paragraph (or function/block, when editing code)",
     "normalMode": [
       "{"
     ],
@@ -612,7 +612,7 @@ var data = {
     "sections": [
       "scrollScreen"
     ],
-    "description": "move cursor line to top of screen",
+    "description": "Move cursor line to top of screen",
     "detail": "zt keeps the cursor in the same column. z<CR> moves to start of line.",
     "normalMode": [
       "zt", "z<CR>"
@@ -626,7 +626,7 @@ var data = {
     "sections": [
       "scrollScreen"
     ],
-    "description": "center cursor on screen",
+    "description": "Center cursor on screen",
     "normalMode": [
       "zz"
     ],
@@ -639,7 +639,7 @@ var data = {
     "sections": [
       "scrollScreen"
     ],
-    "description": "move cursor to bottom of screen",
+    "description": "Move cursor to bottom of screen",
     "normalMode": [
       "zb", "z-"
     ],
@@ -652,7 +652,7 @@ var data = {
     "sections": [
       "scrollScreen"
     ],
-    "description": "move screen down one line (without moving cursor)",
+    "description": "Move screen down one line (without moving cursor)",
     "normalMode": [
       "Ctrl + e"
     ],
@@ -665,7 +665,7 @@ var data = {
     "sections": [
       "scrollScreen"
     ],
-    "description": "move screen up one line (without moving cursor)",
+    "description": "Move screen up one line (without moving cursor)",
     "normalMode": [
       "Ctrl + y"
     ],
@@ -678,7 +678,7 @@ var data = {
     "sections": [
       "scrollScreen", "cursorMovement"
     ],
-    "description": "move backward one full screen", 
+    "description": "Move backward one full screen",
     "normalMode": [
       "Ctrl + b"
     ],
@@ -691,7 +691,7 @@ var data = {
     "sections": [
       "scrollScreen", "cursorMovement"
     ],
-    "description": "move forward one full screen",
+    "description": "Move forward one full screen",
     "normalMode": [
       "Ctrl + f"
     ],
@@ -704,7 +704,7 @@ var data = {
     "sections": [
       "scrollScreen", "cursorMovement"
     ],
-    "description": "move forward 1/2 a screen",
+    "description": "Move forward 1/2 a screen",
     "normalMode": [
       "Ctrl + d"
     ],
@@ -717,7 +717,7 @@ var data = {
     "sections": [
       "scrollScreen", "cursorMovement"
     ],
-    "description": "move back 1/2 a screen",
+    "description": "Move back 1/2 a screen",
     "normalMode": [
       "Ctrl + u"
     ],
@@ -730,7 +730,7 @@ var data = {
     "sections": [
       "inserting"
     ],
-    "description": "insert before the cursor",
+    "description": "Insert before the cursor",
     "normalMode": [
       "i"
     ],
@@ -743,7 +743,7 @@ var data = {
     "sections": [
       "inserting"
     ],
-    "description": "insert at the beginning of the line",
+    "description": "Insert at the beginning of the line",
     "normalMode": [
       "I"
     ],
@@ -756,7 +756,7 @@ var data = {
     "sections": [
       "inserting"
     ],
-    "description": "insert (append) after the cursor",
+    "description": "Insert (append) after the cursor",
     "normalMode": [
       "a"
     ],
@@ -769,7 +769,7 @@ var data = {
     "sections": [
       "inserting"
     ],
-    "description": "insert (append) at the end of the line",
+    "description": "Insert (append) at the end of the line",
     "normalMode": [
       "A"
     ],
@@ -782,7 +782,7 @@ var data = {
     "sections": [
       "inserting"
     ],
-    "description": "append (open) a new line below the current line",
+    "description": "Append (open) a new line below the current line",
     "normalMode": [
       "o"
     ],
@@ -795,7 +795,7 @@ var data = {
     "sections": [
       "inserting"
     ],
-    "description": "append (open) a new line above the current line",
+    "description": "Append (open) a new line above the current line",
     "normalMode": [
       "O"
     ],
@@ -808,7 +808,7 @@ var data = {
     "sections": [
       "inserting"
     ],
-    "description": "insert (append) at the end of the word",
+    "description": "Insert (append) at the end of the word",
     "normalMode": [
       "ea"
     ],
@@ -821,7 +821,7 @@ var data = {
     "sections": [
       "inserting"
     ],
-    "description": "exit insert mode",
+    "description": "Exit insert mode",
     "link": "https://vim.fandom.com/wiki/Avoid_the_escape_key",
     "normalMode": [
       "Esc", "<C-[>", "<C-c>"
@@ -835,7 +835,7 @@ var data = {
     "sections": [
       "editing"
     ],
-    "description": "replace a single character",
+    "description": "Replace a single character",
     "normalMode": [
       "r"
     ],
@@ -848,7 +848,7 @@ var data = {
     "sections": [
       "editing"
     ],
-    "description": "join line below to the current one with one space in between",
+    "description": "Join line below to the current one with one space in between",
     "normalMode": [
       "J"
     ],
@@ -861,7 +861,7 @@ var data = {
     "sections": [
       "editing"
     ],
-    "description": "join line below to the current one without space in between",
+    "description": "Join line below to the current one without space in between",
     "normalMode": [
       "gJ"
     ],
@@ -874,7 +874,7 @@ var data = {
     "sections": [
       "formatting"
     ],
-    "description": "reflow paragraph",
+    "description": "Reflow paragraph",
     "normalMode": [
       "gwip"
     ],
@@ -887,7 +887,7 @@ var data = {
     "sections": [
       "editing"
     ],
-    "description": "change (replace) entire line",
+    "description": "Change (replace) entire line",
     "normalMode": [
       "cc"
     ],
@@ -900,7 +900,7 @@ var data = {
     "sections": [
       "editing"
     ],
-    "description": "change (replace) to the end of the line",
+    "description": "Change (replace) to the end of the line",
     "normalMode": [
       "C"
     ],
@@ -913,7 +913,7 @@ var data = {
     "sections": [
       "editing"
     ],
-    "description": "change (replace) to the end of the line",
+    "description": "Change (replace) to the end of the line",
     "normalMode": [
       "c$"
     ],
@@ -926,7 +926,7 @@ var data = {
     "sections": [
       "editing"
     ],
-    "description": "change (replace) entire word",
+    "description": "Change (replace) entire word",
     "normalMode": [
       "ciw"
     ],
@@ -939,7 +939,7 @@ var data = {
     "sections": [
       "editing"
     ],
-    "description": "change (replace) to the end of the word",
+    "description": "Change (replace) to the end of the word",
     "normalMode": [
       "cw"
     ],
@@ -952,7 +952,7 @@ var data = {
     "sections": [
       "editing"
     ],
-    "description": "delete character and substitute text",
+    "description": "Delete character and substitute text",
     "normalMode": [
       "s"
     ],
@@ -965,7 +965,7 @@ var data = {
     "sections": [
       "editing"
     ],
-    "description": "delete line and substitute text (same as cc)",
+    "description": "Delete line and substitute text (same as cc)",
     "normalMode": [
       "S"
     ],
@@ -978,7 +978,7 @@ var data = {
     "sections": [
       "editing"
     ],
-    "description": "transpose two letters (delete and paste)",
+    "description": "Transpose two letters (delete and paste)",
     "normalMode": [
       "xp"
     ],
@@ -991,7 +991,7 @@ var data = {
     "sections": [
       "editing"
     ],
-    "description": "undo",
+    "description": "Undo",
     "normalMode": [
       "u"
     ],
@@ -1004,7 +1004,7 @@ var data = {
     "sections": [
       "editing"
     ],
-    "description": "redo",
+    "description": "Redo",
     "normalMode": [
       "Ctrl + r"
     ],
@@ -1017,7 +1017,7 @@ var data = {
     "sections": [
       "editing"
     ],
-    "description": "repeat last command",
+    "description": "Repeat last command",
     "normalMode": [
       "."
     ],
@@ -1030,7 +1030,7 @@ var data = {
     "sections": [
       "visualMode"
     ],
-    "description": "start visual mode, mark lines, then do a command (like y-yank)",
+    "description": "Start visual mode, mark lines, then do a command (like y-yank)",
     "normalMode": [
       "v"
     ],
@@ -1043,7 +1043,7 @@ var data = {
     "sections": [
       "visualMode"
     ],
-    "description": "start linewise visual mode",
+    "description": "Start linewise visual mode",
     "normalMode": [
       "V"
     ],
@@ -1056,7 +1056,7 @@ var data = {
     "sections": [
       "visualMode"
     ],
-    "description": "move to other end of marked area",
+    "description": "Move to other end of marked area",
     "normalMode": [
       "o"
     ],
@@ -1069,7 +1069,7 @@ var data = {
     "sections": [
       "visualMode"
     ],
-    "description": "start visual block mode",
+    "description": "Start visual block mode",
     "normalMode": [
       "Ctrl + v"
     ],
@@ -1082,7 +1082,7 @@ var data = {
     "sections": [
       "visualMode"
     ],
-    "description": "move to other corner of block",
+    "description": "Move to other corner of block",
     "normalMode": [
       "O"
     ],
@@ -1095,7 +1095,7 @@ var data = {
     "sections": [
       "visualMode"
     ],
-    "description": "mark a word",
+    "description": "Mark a word",
     "normalMode": [
       "aw"
     ],
@@ -1108,7 +1108,7 @@ var data = {
     "sections": [
       "visualMode"
     ],
-    "description": "a block with ()",
+    "description": "A block with ()",
     "normalMode": [
       "ab"
     ],
@@ -1121,7 +1121,7 @@ var data = {
     "sections": [
       "visualMode"
     ],
-    "description": "a block with {}",
+    "description": "A block with {}",
     "normalMode": [
       "aB"
     ],
@@ -1134,7 +1134,7 @@ var data = {
     "sections": [
       "visualMode"
     ],
-    "description": "inner block with ()",
+    "description": "Inner block with ()",
     "normalMode": [
       "ib"
     ],
@@ -1147,7 +1147,7 @@ var data = {
     "sections": [
       "visualMode"
     ],
-    "description": "inner block with {}",
+    "description": "Inner block with {}",
     "normalMode": [
       "iB"
     ],
@@ -1160,7 +1160,7 @@ var data = {
     "sections": [
       "visualMode"
     ],
-    "description": "exit visual mode",
+    "description": "Exit visual mode",
     "normalMode": [
       "Esc"
     ],
@@ -1173,7 +1173,7 @@ var data = {
     "sections": [
       "Visualcommands"
     ],
-    "description": "shift text right",
+    "description": "Shift text right",
     "normalMode": [
       ">"
     ],
@@ -1186,7 +1186,7 @@ var data = {
     "sections": [
       "Visualcommands"
     ],
-    "description": "shift text left",
+    "description": "Shift text left",
     "normalMode": [
       "<"
     ],
@@ -1199,7 +1199,7 @@ var data = {
     "sections": [
       "Visualcommands"
     ],
-    "description": "yank (copy) marked text",
+    "description": "Yank (copy) marked text",
     "normalMode": [
       "y"
     ],
@@ -1212,7 +1212,7 @@ var data = {
     "sections": [
       "Visualcommands"
     ],
-    "description": "delete marked text",
+    "description": "Delete marked text",
     "normalMode": [
       "d"
     ],
@@ -1251,7 +1251,7 @@ var data = {
     "sections": [
       "Registers"
     ],
-    "description": "show registers content",
+    "description": "Show registers content",
     "normalMode": [
       ":reg"
     ],
@@ -1264,7 +1264,7 @@ var data = {
     "sections": [
       "Registers"
     ],
-    "description": "yank into register x",
+    "description": "Yank into register x",
     "normalMode": [
       "\"xy"
     ],
@@ -1277,7 +1277,7 @@ var data = {
     "sections": [
       "Registers"
     ],
-    "description": "paste contents of register x",
+    "description": "Paste contents of register x",
     "normalMode": [
       "\"xp"
     ],
@@ -1290,7 +1290,7 @@ var data = {
     "sections": [
       "Marks"
     ],
-    "description": "list of marks",
+    "description": "List of marks",
     "normalMode": [
       ":marks"
     ],
@@ -1303,7 +1303,7 @@ var data = {
     "sections": [
       "Marks"
     ],
-    "description": "set current position for mark A",
+    "description": "Set current position for mark A",
     "normalMode": [
       "ma"
     ],
@@ -1316,7 +1316,7 @@ var data = {
     "sections": [
       "Marks"
     ],
-    "description": "jump to position of mark A",
+    "description": "Jump to position of mark A",
     "normalMode": [
       "`a"
     ],
@@ -1329,7 +1329,7 @@ var data = {
     "sections": [
       "Marks"
     ],
-    "description": "yank text to position of mark A",
+    "description": "Yank text to position of mark A",
     "normalMode": [
       "y`a"
     ],
@@ -1342,7 +1342,7 @@ var data = {
     "sections": [
       "Macros"
     ],
-    "description": "record macro a",
+    "description": "Record macro a",
     "normalMode": [
       "qa"
     ],
@@ -1355,7 +1355,7 @@ var data = {
     "sections": [
       "Macros"
     ],
-    "description": "stop recording macro",
+    "description": "Stop recording macro",
     "normalMode": [
       "q"
     ],
@@ -1368,7 +1368,7 @@ var data = {
     "sections": [
       "Macros"
     ],
-    "description": "run macro a",
+    "description": "Run macro a",
     "normalMode": [
       "@a"
     ],
@@ -1381,7 +1381,7 @@ var data = {
     "sections": [
       "Macros"
     ],
-    "description": "rerun last run macro",
+    "description": "Rerun last run macro",
     "normalMode": [
       "@@"
     ],
@@ -1394,7 +1394,7 @@ var data = {
     "sections": [
       "Cutandpaste"
     ],
-    "description": "yank (copy) a line",
+    "description": "Yank (copy) a line",
     "normalMode": [
       "yy"
     ],
@@ -1407,7 +1407,7 @@ var data = {
     "sections": [
       "Cutandpaste"
     ],
-    "description": "yank (copy) 2 lines",
+    "description": "Yank (copy) 2 lines",
     "normalMode": [
       "2yy"
     ],
@@ -1420,7 +1420,7 @@ var data = {
     "sections": [
       "Cutandpaste"
     ],
-    "description": "yank (copy) the characters of the word from the cursor position to the start of the next word",
+    "description": "Yank (copy) the characters of the word from the cursor position to the start of the next word",
     "normalMode": [
       "yw"
     ],
@@ -1433,7 +1433,7 @@ var data = {
     "sections": [
       "Cutandpaste"
     ],
-    "description": "yank (copy) to end of line",
+    "description": "Yank (copy) to end of line",
     "normalMode": [
       "y$"
     ],
@@ -1446,7 +1446,7 @@ var data = {
     "sections": [
       "Cutandpaste"
     ],
-    "description": "put (paste) the clipboard after cursor",
+    "description": "Put (paste) the clipboard after cursor",
     "normalMode": [
       "p"
     ],
@@ -1459,7 +1459,7 @@ var data = {
     "sections": [
       "Cutandpaste"
     ],
-    "description": "put (paste) before cursor",
+    "description": "Put (paste) before cursor",
     "normalMode": [
       "P"
     ],
@@ -1472,7 +1472,7 @@ var data = {
     "sections": [
       "Cutandpaste"
     ],
-    "description": "delete (cut) a line",
+    "description": "Delete (cut) a line",
     "normalMode": [
       "dd"
     ],
@@ -1485,7 +1485,7 @@ var data = {
     "sections": [
       "Cutandpaste"
     ],
-    "description": "delete (cut) 2 lines",
+    "description": "Delete (cut) 2 lines",
     "normalMode": [
       "2dd"
     ],
@@ -1498,7 +1498,7 @@ var data = {
     "sections": [
       "Cutandpaste"
     ],
-    "description": "delete (cut) the characters of the word from the cursor position to the start of the next word",
+    "description": "Delete (cut) the characters of the word from the cursor position to the start of the next word",
     "normalMode": [
       "dw"
     ],
@@ -1511,7 +1511,7 @@ var data = {
     "sections": [
       "Cutandpaste"
     ],
-    "description": "delete (cut) characters from cursor position to beginning of word",
+    "description": "Delete (cut) characters from cursor position to beginning of word",
     "normalMode": [
       "db"
     ],
@@ -1524,7 +1524,7 @@ var data = {
     "sections": [
       "Cutandpaste"
     ],
-    "description": "delete (cut) to the end of the line",
+    "description": "Delete (cut) to the end of the line",
     "normalMode": [
       "D"
     ],
@@ -1537,7 +1537,7 @@ var data = {
     "sections": [
       "Cutandpaste"
     ],
-    "description": "delete (cut) to the end of the line",
+    "description": "Delete (cut) to the end of the line",
     "normalMode": [
       "d$"
     ],
@@ -1550,7 +1550,7 @@ var data = {
     "sections": [
       "Cutandpaste"
     ],
-    "description": "delete (cut) character",
+    "description": "Delete (cut) character",
     "normalMode": [
       "x"
     ],
@@ -1563,7 +1563,7 @@ var data = {
     "sections": [
       "Exiting"
     ],
-    "description": "write (save) the file, but don't exit",
+    "description": "Write (save) the file, but don't exit",
     "normalMode": [
     ],
     "insertMode": [],
@@ -1577,7 +1577,7 @@ var data = {
     "sections": [
       "Exiting"
     ],
-    "description": "write out the current file using sudo",
+    "description": "Write out the current file using sudo",
     "normalMode": [
     ],
     "insertMode": [],
@@ -1591,7 +1591,7 @@ var data = {
     "sections": [
       "Exiting"
     ],
-    "description": "write (save) and quit",
+    "description": "Write (save) and quit",
     "normalMode": [
         "ZZ"
     ],
@@ -1606,7 +1606,7 @@ var data = {
     "sections": [
       "Exiting"
     ],
-    "description": "quit (fails if there are unsaved changes)",
+    "description": "Quit (fails if there are unsaved changes)",
     "normalMode": [
     ],
     "insertMode": [],
@@ -1620,7 +1620,7 @@ var data = {
     "sections": [
       "Exiting"
     ],
-    "description": "quit and throw away unsaved changes",
+    "description": "Quit and throw away unsaved changes",
     "normalMode": [
       "ZQ"
     ],
@@ -1634,7 +1634,7 @@ var data = {
     "sections": [
       "Exiting"
     ],
-    "description": "write (save) and quit on all tabs",
+    "description": "Write (save) and quit on all tabs",
     "normalMode": [
     ],
     "insertMode": [],
@@ -1648,7 +1648,7 @@ var data = {
     "sections": [
       "Searchandreplace"
     ],
-    "description": "search for pattern",
+    "description": "Search for pattern",
     "normalMode": [
       "/pattern"
     ],
@@ -1661,7 +1661,7 @@ var data = {
     "sections": [
       "Searchandreplace"
     ],
-    "description": "search backward for pattern",
+    "description": "Search backward for pattern",
     "normalMode": [
       "?pattern"
     ],
@@ -1687,7 +1687,7 @@ var data = {
     "sections": [
       "Searchandreplace"
     ],
-    "description": "repeat search in same direction",
+    "description": "Repeat search in same direction",
     "normalMode": [
       "n"
     ],
@@ -1700,7 +1700,7 @@ var data = {
     "sections": [
       "Searchandreplace"
     ],
-    "description": "repeat search in opposite direction",
+    "description": "Repeat search in opposite direction",
     "normalMode": [
       "N"
     ],
@@ -1713,7 +1713,7 @@ var data = {
     "sections": [
       "Searchandreplace"
     ],
-    "description": "replace all old with new throughout file",
+    "description": "Replace all old with new throughout file",
     "normalMode": [
     ],
     "insertMode": [],
@@ -1727,7 +1727,7 @@ var data = {
     "sections": [
       "Searchandreplace"
     ],
-    "description": "replace all old with new throughout file with confirmations",
+    "description": "Replace all old with new throughout file with confirmations",
     "normalMode": [
     ],
     "insertMode": [],
@@ -1741,7 +1741,7 @@ var data = {
     "sections": [
       "Searchandreplace"
     ],
-    "description": "remove highlighting of search matches",
+    "description": "Remove highlighting of search matches",
     "normalMode": [
     ],
     "insertMode": [],
@@ -1755,7 +1755,7 @@ var data = {
     "sections": [
       "Searchinmultiplefiles"
     ],
-    "description": "search for pattern in multiple files",
+    "description": "Search for pattern in multiple files",
     "normalMode": [
     ],
     "insertMode": [],
@@ -1769,7 +1769,7 @@ var data = {
     "sections": [
       "Searchinmultiplefiles"
     ],
-    "description": "jump to the next match",
+    "description": "Jump to the next match",
     "normalMode": [
     ],
     "insertMode": [],
@@ -1783,7 +1783,7 @@ var data = {
     "sections": [
       "Searchinmultiplefiles"
     ],
-    "description": "jump to the previous match",
+    "description": "Jump to the previous match",
     "normalMode": [
     ],
     "insertMode": [],
@@ -1797,7 +1797,7 @@ var data = {
     "sections": [
       "Searchinmultiplefiles"
     ],
-    "description": "open a window containing the list of matches",
+    "description": "Open a window containing the list of matches",
     "normalMode": [
     ],
     "insertMode": [],
@@ -1811,7 +1811,7 @@ var data = {
     "sections": [
       "Workingwithmultiplefiles"
     ],
-    "description": "edit a file in a new buffer",
+    "description": "Edit a file in a new buffer",
     "normalMode": [
     ],
     "insertMode": [],
@@ -1825,7 +1825,7 @@ var data = {
     "sections": [
       "Workingwithmultiplefiles"
     ],
-    "description": "go to the next buffer",
+    "description": "Go to the next buffer",
     "normalMode": [
     ],
     "insertMode": [],
@@ -1839,7 +1839,7 @@ var data = {
     "sections": [
       "Workingwithmultiplefiles"
     ],
-    "description": "go to the previous buffer",
+    "description": "Go to the previous buffer",
     "normalMode": [
     ],
     "insertMode": [],
@@ -1853,7 +1853,7 @@ var data = {
     "sections": [
       "Workingwithmultiplefiles"
     ],
-    "description": "delete a buffer (close a file)",
+    "description": "Delete a buffer (close a file)",
     "normalMode": [
     ],
     "insertMode": [],
@@ -1867,7 +1867,7 @@ var data = {
     "sections": [
       "Workingwithmultiplefiles"
     ],
-    "description": "list all open buffers",
+    "description": "List all open buffers",
     "normalMode": [
     ],
     "insertMode": [],
@@ -1881,7 +1881,7 @@ var data = {
     "sections": [
       "Workingwithmultiplefiles"
     ],
-    "description": "open a file in a new buffer and split window",
+    "description": "Open a file in a new buffer and split window",
     "normalMode": [
     ],
     "insertMode": [],
@@ -1895,7 +1895,7 @@ var data = {
     "sections": [
       "Workingwithmultiplefiles"
     ],
-    "description": "open a file in a new buffer and vertically split window",
+    "description": "Open a file in a new buffer and vertically split window",
     "normalMode": [
     ],
     "insertMode": [],
@@ -1909,7 +1909,7 @@ var data = {
     "sections": [
       "Workingwithmultiplefiles"
     ],
-    "description": "split window",
+    "description": "Split window",
     "normalMode": [
       "Ctrl + ws"
     ],
@@ -1922,7 +1922,7 @@ var data = {
     "sections": [
       "Workingwithmultiplefiles"
     ],
-    "description": "switch windows",
+    "description": "Switch windows",
     "normalMode": [
       "Ctrl + ww"
     ],
@@ -1935,7 +1935,7 @@ var data = {
     "sections": [
       "Workingwithmultiplefiles"
     ],
-    "description": "quit a window",
+    "description": "Quit a window",
     "normalMode": [
       "Ctrl + wq"
     ],
@@ -1948,7 +1948,7 @@ var data = {
     "sections": [
       "Workingwithmultiplefiles"
     ],
-    "description": "split window vertically",
+    "description": "Split window vertically",
     "normalMode": [
       "Ctrl + wv"
     ],
@@ -1961,7 +1961,7 @@ var data = {
     "sections": [
       "Workingwithmultiplefiles"
     ],
-    "description": "move cursor to the left window (vertical split)",
+    "description": "Move cursor to the left window (vertical split)",
     "normalMode": [
       "Ctrl + wh"
     ],
@@ -1974,7 +1974,7 @@ var data = {
     "sections": [
       "Workingwithmultiplefiles"
     ],
-    "description": "move cursor to the right window (vertical split)",
+    "description": "Move cursor to the right window (vertical split)",
     "normalMode": [
       "Ctrl + wl"
     ],
@@ -1987,7 +1987,7 @@ var data = {
     "sections": [
       "Workingwithmultiplefiles"
     ],
-    "description": "move cursor to the window below (horizontal split)",
+    "description": "Move cursor to the window below (horizontal split)",
     "normalMode": [
       "Ctrl + wj"
     ],
@@ -2000,7 +2000,7 @@ var data = {
     "sections": [
       "Workingwithmultiplefiles"
     ],
-    "description": "move cursor to the window above (horizontal split)",
+    "description": "Move cursor to the window above (horizontal split)",
     "normalMode": [
       "Ctrl + wk"
     ],
@@ -2013,7 +2013,7 @@ var data = {
     "sections": [
       "Tabs"
     ],
-    "description": "open a file in a new tab",
+    "description": "Open a file in a new tab",
     "normalMode": [
     ],
     "insertMode": [],
@@ -2027,7 +2027,7 @@ var data = {
     "sections": [
       "Tabs"
     ],
-    "description": "move the current split window into its own tab",
+    "description": "Move the current split window into its own tab",
     "normalMode": [
       "Ctrl + wT"
     ],
@@ -2040,7 +2040,7 @@ var data = {
     "sections": [
       "Tabs"
     ],
-    "description": "move to the next tab",
+    "description": "Move to the next tab",
     "normalMode": [
       "gt"
     ],
@@ -2054,7 +2054,7 @@ var data = {
     "sections": [
       "Tabs"
     ],
-    "description": "move to the previous tab",
+    "description": "Move to the previous tab",
     "normalMode": [
       "gT"
     ],
@@ -2068,7 +2068,7 @@ var data = {
     "sections": [
       "Tabs"
     ],
-    "description": "move to tab number #",
+    "description": "Move to tab number #",
     "normalMode": [
       "#gt"
     ],
@@ -2081,7 +2081,7 @@ var data = {
     "sections": [
       "Tabs"
     ],
-    "description": "move current tab to the #th position (indexed from 0)",
+    "description": "Move current tab to the #th position (indexed from 0)",
     "normalMode": [
     ],
     "insertMode": [],
@@ -2095,7 +2095,7 @@ var data = {
     "sections": [
       "Tabs"
     ],
-    "description": "close the current tab and all its windows",
+    "description": "Close the current tab and all its windows",
     "normalMode": [
     ],
     "insertMode": [],
@@ -2109,7 +2109,7 @@ var data = {
     "sections": [
       "Tabs"
     ],
-    "description": "close all tabs except for the current one",
+    "description": "Close all tabs except for the current one",
     "normalMode": [
     ],
     "insertMode": [],
@@ -2123,7 +2123,7 @@ var data = {
     "sections": [
       "Tabs"
     ],
-    "description": "run the command on all tabs (e.g. :tabdo q - closes all opened tabs)",
+    "description": "Run the command on all tabs (e.g. :tabdo q - closes all opened tabs)",
     "normalMode": [
     ],
     "insertMode": [],

@@ -11,6 +11,15 @@ function validateSections(args) {
     }
 }
 
+function validateAllDataSections() {
+    let i = 0;
+    for (; i < data.content.length; i++) {
+        validateSections(data.content[i].sections);
+    }
+
+    console.log("Validated " + i + " sections successfully");
+}
+
 function validateMapping(binding) {
     const type = Object.keys(binding)[0];
 
@@ -48,7 +57,9 @@ function find(binding) {
 }
 
 function d() {
-    return {description: arguments[0]};
+    let description = arguments[0];
+    description = description.charAt(0).toUpperCase() + description.slice(1);
+    return {description: description};
 }
 
 function n() {
