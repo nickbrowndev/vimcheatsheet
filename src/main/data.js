@@ -13,7 +13,8 @@ let data = {
     },
     "textObjectMovement": {
         "parent": "movement",
-        "title": "Text Object"
+        "title": "Text Object",
+        "text": ":h text-objects"
     },
     "scrollScreen": {
       "parent": "movement",
@@ -429,6 +430,19 @@ let data = {
     "exCommand": [],
     "visualInsertMode": []
   },
+    {
+      "sections": [
+        "textObjectMovement"
+      ],
+      "description": "Next HTML/XML tag",
+      "normalMode": [
+        "t"
+      ],
+      "insertMode": [],
+      "visualMode": [],
+      "exCommand": [],
+      "visualInsertMode": []
+    },
   {
     "sections": [
       "textObjectMovement"
@@ -608,6 +622,123 @@ let data = {
     "exCommand": [],
     "visualInsertMode": []
   },
+    {
+      "sections": [
+        "textObjectMovement"
+      ],
+      "description": "Next [] block",
+      "normalMode": [
+        "]"
+      ],
+      "insertMode": [],
+      "visualMode": [],
+      "exCommand": [],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
+        "textObjectMovement"
+      ],
+      "description": "Previous [] block",
+      "normalMode": [
+        "["
+      ],
+      "insertMode": [],
+      "visualMode": [],
+      "exCommand": [],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
+        "textObjectMovement"
+      ],
+      "description": "Next () block",
+      "normalMode": [
+        ")"
+      ],
+      "insertMode": [],
+      "visualMode": [],
+      "exCommand": [],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
+        "textObjectMovement"
+      ],
+      "description": "Previous () block",
+      "normalMode": [
+        "("
+      ],
+      "insertMode": [],
+      "visualMode": [],
+      "exCommand": [],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
+        "textObjectMovement"
+      ],
+      "description": "Next <> block",
+      "normalMode": [
+        ">"
+      ],
+      "insertMode": [],
+      "visualMode": [],
+      "exCommand": [],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
+        "textObjectMovement"
+      ],
+      "description": "Previous <> block",
+      "normalMode": [
+        "<"
+      ],
+      "insertMode": [],
+      "visualMode": [],
+      "exCommand": [],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
+        "textObjectMovement"
+      ],
+      "description": "Next \"\" (double quote) block",
+      "normalMode": [
+        "\""
+      ],
+      "insertMode": [],
+      "visualMode": [],
+      "exCommand": [],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
+        "textObjectMovement"
+      ],
+      "description": "Next \'\' (single quote) block",
+      "normalMode": [
+        "\'"
+      ],
+      "insertMode": [],
+      "visualMode": [],
+      "exCommand": [],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
+        "textObjectMovement"
+      ],
+      "description": "Next \`\` (backtick) block",
+      "normalMode": [
+        "\`"
+      ],
+      "insertMode": [],
+      "visualMode": [],
+      "exCommand": [],
+      "visualInsertMode": []
+    },
   {
     "sections": [
       "scrollScreen"
@@ -1032,7 +1163,7 @@ let data = {
     ],
     "description": "Start visual mode, mark lines, then do a command (like y-yank)",
     "normalMode": [
-      "v"
+      "v<movement>"
     ],
     "insertMode": [],
     "visualMode": [],
