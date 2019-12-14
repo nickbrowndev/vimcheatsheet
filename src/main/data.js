@@ -34,6 +34,12 @@ let data = {
     "buffers": {
         "title": "Buffers"
     },
+    "windows": {
+        "title": "Windows"
+    },
+    "registers": {
+      "title": "Registers"
+    },
     "motions": {
         "title": "Motions",
         "link": "http://vimdoc.sourceforge.net/htmldoc/motion.html"
@@ -56,46 +62,28 @@ let data = {
         "title": "Formatting",
         "text": ":h gq, :h gw, :h fo (format options), :h fp (format program), :h fo-table"
     },
+    "marks": {
+      "title": "Marks"
+    },
+    "macros": {
+      "title": "Macros"
+    },
     "visualMode": {
-      "title": "Visual Mode"
+      "title": "Selecting Text"
+    },
+    "files": {
+      "title": "Files"
     },
     "break": {
         "title": "BREAK"
     },
-    "Global": {
-      "title": "Global"
-    },
-    "Visualcommands": {
-      "title": "Visual commands"
-    },
-    "switchingCase": {
-        "title": "Changing Case of Text"
-    },
-    "Registers": {
-      "title": "Registers"
-    },
-    "Marks": {
-      "title": "Marks"
-    },
-    "Macros": {
-      "title": "Macros"
-    },
-    "Cutandpaste": {
-      "title": "Cut and paste"
-    },
-    "Exiting": {
-      "title": "Exiting"
-    },
-    "Searchandreplace": {
+    "searchAndReplace": {
       "title": "Search and replace"
     },
-    "Searchinmultiplefiles": {
-      "title": "Search in multiple files"
+    "searchInMultipleFiles": {
+      "title": "Search in Multiple Files"
     },
-    "Workingwithmultiplefiles": {
-      "title": "Working with multiple files"
-    },
-    "Tabs": {
+    "tabs": {
       "title": "Tabs"
     }
   },
@@ -182,9 +170,9 @@ let data = {
     "sections": [
       "scrollScreen"
     ],
-    "description": "Move screen down one line",
+    "description": "Move screen down one line [n lines]",
     "normalMode": [
-      "<C-e>"
+      "[n]^e"
     ],
     "insertMode": [],
     "visualMode": [],
@@ -193,7 +181,20 @@ let data = {
   },
   {
     "sections": [
-      "help", "Global"
+      "scrollScreen"
+    ],
+    "description": "Move screen up half a screen",
+    "normalMode": [
+      "^u"
+    ],
+    "insertMode": [],
+    "visualMode": [],
+    "exCommand": [],
+    "visualInsertMode": []
+  },
+  {
+    "sections": [
+      "help"
     ],
     "description": "Open help for keyword",
     "normalMode": [
@@ -235,21 +236,20 @@ let data = {
   },
   {
     "sections": [
-      "Global"
+      "windows"
     ],
-    "description": "Close current pane",
-    "normalMode": [
-    ],
+    "description": "Close current pane [force]",
+    "normalMode": ["^wc"],
     "insertMode": [],
     "visualMode": [],
     "exCommand": [
-      ":close"
+      ":close[!]", ":quit"
     ],
     "visualInsertMode": []
   },
   {
     "sections": [
-      "help", "Global"
+      "help"
     ],
     "description": "Open help page for word under the cursor",
     "normalMode": [
@@ -654,7 +654,7 @@ let data = {
     ],
     "description": "Move screen down one line (without moving cursor)",
     "normalMode": [
-      "Ctrl + e"
+      "^e"
     ],
     "insertMode": [],
     "visualMode": [],
@@ -667,7 +667,7 @@ let data = {
     ],
     "description": "Move screen up one line (without moving cursor)",
     "normalMode": [
-      "Ctrl + y"
+      "^y"
     ],
     "insertMode": [],
     "visualMode": [],
@@ -680,7 +680,7 @@ let data = {
     ],
     "description": "Move backward one full screen",
     "normalMode": [
-      "Ctrl + b"
+      "^b"
     ],
     "insertMode": [],
     "visualMode": [],
@@ -693,7 +693,7 @@ let data = {
     ],
     "description": "Move forward one full screen",
     "normalMode": [
-      "Ctrl + f"
+      "^f"
     ],
     "insertMode": [],
     "visualMode": [],
@@ -706,7 +706,7 @@ let data = {
     ],
     "description": "Move forward 1/2 a screen",
     "normalMode": [
-      "Ctrl + d"
+      "^d"
     ],
     "insertMode": [],
     "visualMode": [],
@@ -719,7 +719,7 @@ let data = {
     ],
     "description": "Move back 1/2 a screen",
     "normalMode": [
-      "Ctrl + u"
+      "^u"
     ],
     "insertMode": [],
     "visualMode": [],
@@ -824,7 +824,7 @@ let data = {
     "description": "Exit insert mode",
     "link": "https://vim.fandom.com/wiki/Avoid_the_escape_key",
     "normalMode": [
-      "Esc", "<C-[>", "<C-c>"
+      "Esc", "^[", "^c"
     ],
     "insertMode": [],
     "visualMode": [],
@@ -1006,7 +1006,7 @@ let data = {
     ],
     "description": "Redo",
     "normalMode": [
-      "Ctrl + r"
+      "^r"
     ],
     "insertMode": [],
     "visualMode": [],
@@ -1071,7 +1071,7 @@ let data = {
     ],
     "description": "Start visual block mode",
     "normalMode": [
-      "Ctrl + v"
+      "^v"
     ],
     "insertMode": [],
     "visualMode": [],
@@ -1171,33 +1171,33 @@ let data = {
   },
   {
     "sections": [
-      "Visualcommands"
+      "formatting"
     ],
     "description": "Shift text right",
     "normalMode": [
-      ">"
+      ">>"
     ],
     "insertMode": [],
-    "visualMode": [],
+    "visualMode": [">"],
     "exCommand": [],
     "visualInsertMode": []
   },
   {
     "sections": [
-      "Visualcommands"
+      "formatting"
     ],
     "description": "Shift text left",
     "normalMode": [
-      "<"
+      "<<"
     ],
     "insertMode": [],
-    "visualMode": [],
+    "visualMode": ["<"],
     "exCommand": [],
     "visualInsertMode": []
   },
   {
     "sections": [
-      "Visualcommands"
+      "editing"
     ],
     "description": "Yank (copy) marked text",
     "normalMode": [
@@ -1210,7 +1210,7 @@ let data = {
   },
   {
     "sections": [
-      "Visualcommands"
+      "editing"
     ],
     "description": "Delete marked text",
     "normalMode": [
@@ -1223,7 +1223,7 @@ let data = {
   },
   {
     "sections": [
-      "Visualcommands", "switchingCase"
+      "editing"
     ],
     "description": "Toggle case",
     "normalMode": [
@@ -1236,7 +1236,7 @@ let data = {
   },
   {
     "sections": [
-      "Visualcommands", "switchingCase"
+        "editing"
     ],
     "description": "Toggle case of entire line",
     "normalMode": [
@@ -1249,7 +1249,33 @@ let data = {
   },
   {
     "sections": [
-      "Registers"
+      "editing"
+    ],
+    "description": "Upper case entire line",
+    "normalMode": [
+      "gUU"
+    ],
+    "insertMode": [],
+    "visualMode": ["VU"],
+    "exCommand": [],
+    "visualInsertMode": []
+  },
+  {
+    "sections": [
+      "editing"
+    ],
+    "description": "Lower case entire line",
+    "normalMode": [
+      "guu"
+    ],
+    "insertMode": [],
+    "visualMode": ["Vu"],
+    "exCommand": [],
+    "visualInsertMode": []
+  },
+  {
+    "sections": [
+      "registers"
     ],
     "description": "Show registers content",
     "normalMode": [
@@ -1262,7 +1288,7 @@ let data = {
   },
   {
     "sections": [
-      "Registers"
+      "registers"
     ],
     "description": "Yank into register x",
     "normalMode": [
@@ -1275,7 +1301,7 @@ let data = {
   },
   {
     "sections": [
-      "Registers"
+      "registers"
     ],
     "description": "Paste contents of register x",
     "normalMode": [
@@ -1288,7 +1314,7 @@ let data = {
   },
   {
     "sections": [
-      "Marks"
+      "marks"
     ],
     "description": "List of marks",
     "normalMode": [
@@ -1301,7 +1327,7 @@ let data = {
   },
   {
     "sections": [
-      "Marks"
+      "marks"
     ],
     "description": "Set current position for mark A",
     "normalMode": [
@@ -1314,7 +1340,7 @@ let data = {
   },
   {
     "sections": [
-      "Marks"
+      "marks"
     ],
     "description": "Jump to position of mark A",
     "normalMode": [
@@ -1327,7 +1353,7 @@ let data = {
   },
   {
     "sections": [
-      "Marks"
+      "marks"
     ],
     "description": "Yank text to position of mark A",
     "normalMode": [
@@ -1340,7 +1366,7 @@ let data = {
   },
   {
     "sections": [
-      "Macros"
+      "macros"
     ],
     "description": "Record macro a",
     "normalMode": [
@@ -1353,7 +1379,7 @@ let data = {
   },
   {
     "sections": [
-      "Macros"
+      "macros"
     ],
     "description": "Stop recording macro",
     "normalMode": [
@@ -1366,7 +1392,7 @@ let data = {
   },
   {
     "sections": [
-      "Macros"
+      "macros"
     ],
     "description": "Run macro a",
     "normalMode": [
@@ -1379,7 +1405,7 @@ let data = {
   },
   {
     "sections": [
-      "Macros"
+      "macros"
     ],
     "description": "Rerun last run macro",
     "normalMode": [
@@ -1392,11 +1418,11 @@ let data = {
   },
   {
     "sections": [
-      "Cutandpaste"
+      "editing"
     ],
-    "description": "Yank (copy) a line",
+    "description": "Yank (copy) a line [n lines]",
     "normalMode": [
-      "yy"
+      "[n]yy"
     ],
     "insertMode": [],
     "visualMode": [],
@@ -1405,20 +1431,7 @@ let data = {
   },
   {
     "sections": [
-      "Cutandpaste"
-    ],
-    "description": "Yank (copy) 2 lines",
-    "normalMode": [
-      "2yy"
-    ],
-    "insertMode": [],
-    "visualMode": [],
-    "exCommand": [],
-    "visualInsertMode": []
-  },
-  {
-    "sections": [
-      "Cutandpaste"
+      "editing"
     ],
     "description": "Yank (copy) the characters of the word from the cursor position to the start of the next word",
     "normalMode": [
@@ -1431,7 +1444,7 @@ let data = {
   },
   {
     "sections": [
-      "Cutandpaste"
+      "editing"
     ],
     "description": "Yank (copy) to end of line",
     "normalMode": [
@@ -1444,7 +1457,7 @@ let data = {
   },
   {
     "sections": [
-      "Cutandpaste"
+      "editing"
     ],
     "description": "Put (paste) the clipboard after cursor",
     "normalMode": [
@@ -1457,7 +1470,7 @@ let data = {
   },
   {
     "sections": [
-      "Cutandpaste"
+      "editing"
     ],
     "description": "Put (paste) before cursor",
     "normalMode": [
@@ -1470,24 +1483,11 @@ let data = {
   },
   {
     "sections": [
-      "Cutandpaste"
+      "editing"
     ],
-    "description": "Delete (cut) a line",
+    "description": "Delete (cut) a line [n lines]",
     "normalMode": [
-      "dd"
-    ],
-    "insertMode": ["<c-u>"],
-    "visualMode": [],
-    "exCommand": [],
-    "visualInsertMode": []
-  },
-  {
-    "sections": [
-      "Cutandpaste"
-    ],
-    "description": "Delete (cut) 2 lines",
-    "normalMode": [
-      "2dd"
+      "[n]dd"
     ],
     "insertMode": [],
     "visualMode": [],
@@ -1496,7 +1496,7 @@ let data = {
   },
   {
     "sections": [
-      "Cutandpaste"
+      "editing"
     ],
     "description": "Delete (cut) the characters of the word from the cursor position to the start of the next word",
     "normalMode": [
@@ -1509,24 +1509,24 @@ let data = {
   },
   {
     "sections": [
-      "Cutandpaste"
+      "editing"
     ],
     "description": "Delete (cut) characters from cursor position to beginning of word",
     "normalMode": [
       "db"
     ],
-    "insertMode": ["<c-w>"],
+    "insertMode": ["^w"],
     "visualMode": [],
     "exCommand": [],
     "visualInsertMode": []
   },
   {
     "sections": [
-      "Cutandpaste"
+      "editing"
     ],
     "description": "Delete (cut) to the end of the line",
     "normalMode": [
-      "D"
+      "D", "d$"
     ],
     "insertMode": [],
     "visualMode": [],
@@ -1535,24 +1535,11 @@ let data = {
   },
   {
     "sections": [
-      "Cutandpaste"
-    ],
-    "description": "Delete (cut) to the end of the line",
-    "normalMode": [
-      "d$"
-    ],
-    "insertMode": [],
-    "visualMode": [],
-    "exCommand": [],
-    "visualInsertMode": []
-  },
-  {
-    "sections": [
-      "Cutandpaste"
+      "editing"
     ],
     "description": "Delete (cut) character",
     "normalMode": [
-      "x"
+      "x", "dl"
     ],
     "insertMode": [],
     "visualMode": [],
@@ -1561,7 +1548,7 @@ let data = {
   },
   {
     "sections": [
-      "Exiting"
+      "files"
     ],
     "description": "Write (save) the file, but don't exit",
     "normalMode": [
@@ -1575,7 +1562,7 @@ let data = {
   },
   {
     "sections": [
-      "Exiting"
+      "files"
     ],
     "description": "Write out the current file using sudo",
     "normalMode": [
@@ -1589,7 +1576,7 @@ let data = {
   },
   {
     "sections": [
-      "Exiting"
+      "files"
     ],
     "description": "Write (save) and quit",
     "normalMode": [
@@ -1604,7 +1591,7 @@ let data = {
   },
   {
     "sections": [
-      "Exiting"
+      "files"
     ],
     "description": "Quit (fails if there are unsaved changes)",
     "normalMode": [
@@ -1618,7 +1605,7 @@ let data = {
   },
   {
     "sections": [
-      "Exiting"
+      "files"
     ],
     "description": "Quit and throw away unsaved changes",
     "normalMode": [
@@ -1632,7 +1619,7 @@ let data = {
   },
   {
     "sections": [
-      "Exiting"
+      "files"
     ],
     "description": "Write (save) and quit on all tabs",
     "normalMode": [
@@ -1646,7 +1633,7 @@ let data = {
   },
   {
     "sections": [
-      "Searchandreplace"
+      "searchAndReplace"
     ],
     "description": "Search for pattern",
     "normalMode": [
@@ -1659,7 +1646,7 @@ let data = {
   },
   {
     "sections": [
-      "Searchandreplace"
+      "searchAndReplace"
     ],
     "description": "Search backward for pattern",
     "normalMode": [
@@ -1672,7 +1659,7 @@ let data = {
   },
   {
     "sections": [
-      "Searchandreplace"
+      "searchAndReplace"
     ],
     "description": "'very magic' pattern: non-alphanumeric characters are interpreted as special regex symbols (no escaping needed)",
     "normalMode": [
@@ -1685,7 +1672,7 @@ let data = {
   },
   {
     "sections": [
-      "Searchandreplace"
+      "searchAndReplace"
     ],
     "description": "Repeat search in same direction",
     "normalMode": [
@@ -1698,7 +1685,7 @@ let data = {
   },
   {
     "sections": [
-      "Searchandreplace"
+      "searchAndReplace"
     ],
     "description": "Repeat search in opposite direction",
     "normalMode": [
@@ -1711,7 +1698,7 @@ let data = {
   },
   {
     "sections": [
-      "Searchandreplace"
+      "searchAndReplace"
     ],
     "description": "Replace all old with new throughout file",
     "normalMode": [
@@ -1725,7 +1712,7 @@ let data = {
   },
   {
     "sections": [
-      "Searchandreplace"
+      "searchAndReplace"
     ],
     "description": "Replace all old with new throughout file with confirmations",
     "normalMode": [
@@ -1739,7 +1726,7 @@ let data = {
   },
   {
     "sections": [
-      "Searchandreplace"
+      "searchAndReplace"
     ],
     "description": "Remove highlighting of search matches",
     "normalMode": [
@@ -1753,7 +1740,7 @@ let data = {
   },
   {
     "sections": [
-      "Searchinmultiplefiles"
+      "searchInMultipleFiles"
     ],
     "description": "Search for pattern in multiple files",
     "normalMode": [
@@ -1767,7 +1754,7 @@ let data = {
   },
   {
     "sections": [
-      "Searchinmultiplefiles"
+      "searchInMultipleFiles"
     ],
     "description": "Jump to the next match",
     "normalMode": [
@@ -1781,7 +1768,7 @@ let data = {
   },
   {
     "sections": [
-      "Searchinmultiplefiles"
+      "searchInMultipleFiles"
     ],
     "description": "Jump to the previous match",
     "normalMode": [
@@ -1795,7 +1782,7 @@ let data = {
   },
   {
     "sections": [
-      "Searchinmultiplefiles"
+      "searchInMultipleFiles"
     ],
     "description": "Open a window containing the list of matches",
     "normalMode": [
@@ -1809,7 +1796,7 @@ let data = {
   },
   {
     "sections": [
-      "Workingwithmultiplefiles"
+      "files", "buffers"
     ],
     "description": "Edit a file in a new buffer",
     "normalMode": [
@@ -1823,7 +1810,7 @@ let data = {
   },
   {
     "sections": [
-      "Workingwithmultiplefiles"
+      "buffers"
     ],
     "description": "Go to the next buffer",
     "normalMode": [
@@ -1837,7 +1824,7 @@ let data = {
   },
   {
     "sections": [
-      "Workingwithmultiplefiles"
+      "buffers"
     ],
     "description": "Go to the previous buffer",
     "normalMode": [
@@ -1851,7 +1838,7 @@ let data = {
   },
   {
     "sections": [
-      "Workingwithmultiplefiles"
+      "buffers"
     ],
     "description": "Delete a buffer (close a file)",
     "normalMode": [
@@ -1865,7 +1852,7 @@ let data = {
   },
   {
     "sections": [
-      "Workingwithmultiplefiles"
+      "buffers"
     ],
     "description": "List all open buffers",
     "normalMode": [
@@ -1879,39 +1866,25 @@ let data = {
   },
   {
     "sections": [
-      "Workingwithmultiplefiles"
+      "files", "windows"
     ],
-    "description": "Open a file in a new buffer and split window",
+    "description": "Open a file in a new buffer and split window [vertically]",
     "normalMode": [
     ],
     "insertMode": [],
     "visualMode": [],
     "exCommand": [
-      ":sp file"
+      ":[v]sp file"
     ],
     "visualInsertMode": []
   },
   {
     "sections": [
-      "Workingwithmultiplefiles"
-    ],
-    "description": "Open a file in a new buffer and vertically split window",
-    "normalMode": [
-    ],
-    "insertMode": [],
-    "visualMode": [],
-    "exCommand": [
-      ":vsp file"
-    ],
-    "visualInsertMode": []
-  },
-  {
-    "sections": [
-      "Workingwithmultiplefiles"
+      "windows"
     ],
     "description": "Split window",
     "normalMode": [
-      "Ctrl + ws"
+      "^ws"
     ],
     "insertMode": [],
     "visualMode": [],
@@ -1920,11 +1893,11 @@ let data = {
   },
   {
     "sections": [
-      "Workingwithmultiplefiles"
+      "windows"
     ],
     "description": "Switch windows",
     "normalMode": [
-      "Ctrl + ww"
+      "^ww"
     ],
     "insertMode": [],
     "visualMode": [],
@@ -1933,24 +1906,11 @@ let data = {
   },
   {
     "sections": [
-      "Workingwithmultiplefiles"
-    ],
-    "description": "Quit a window",
-    "normalMode": [
-      "Ctrl + wq"
-    ],
-    "insertMode": [],
-    "visualMode": [],
-    "exCommand": [],
-    "visualInsertMode": []
-  },
-  {
-    "sections": [
-      "Workingwithmultiplefiles"
+      "windows"
     ],
     "description": "Split window vertically",
     "normalMode": [
-      "Ctrl + wv"
+      "^wv"
     ],
     "insertMode": [],
     "visualMode": [],
@@ -1959,11 +1919,11 @@ let data = {
   },
   {
     "sections": [
-      "Workingwithmultiplefiles"
+      "windows"
     ],
     "description": "Move cursor to the left window (vertical split)",
     "normalMode": [
-      "Ctrl + wh"
+      "^wh"
     ],
     "insertMode": [],
     "visualMode": [],
@@ -1972,11 +1932,11 @@ let data = {
   },
   {
     "sections": [
-      "Workingwithmultiplefiles"
+      "windows"
     ],
     "description": "Move cursor to the right window (vertical split)",
     "normalMode": [
-      "Ctrl + wl"
+      "^wl"
     ],
     "insertMode": [],
     "visualMode": [],
@@ -1985,11 +1945,11 @@ let data = {
   },
   {
     "sections": [
-      "Workingwithmultiplefiles"
+      "windows"
     ],
     "description": "Move cursor to the window below (horizontal split)",
     "normalMode": [
-      "Ctrl + wj"
+      "^wj"
     ],
     "insertMode": [],
     "visualMode": [],
@@ -1998,11 +1958,11 @@ let data = {
   },
   {
     "sections": [
-      "Workingwithmultiplefiles"
+      "windows"
     ],
     "description": "Move cursor to the window above (horizontal split)",
     "normalMode": [
-      "Ctrl + wk"
+      "^wk"
     ],
     "insertMode": [],
     "visualMode": [],
@@ -2011,7 +1971,7 @@ let data = {
   },
   {
     "sections": [
-      "Tabs"
+      "tabs"
     ],
     "description": "Open a file in a new tab",
     "normalMode": [
@@ -2025,11 +1985,11 @@ let data = {
   },
   {
     "sections": [
-      "Tabs"
+      "tabs", "windows"
     ],
     "description": "Move the current split window into its own tab",
     "normalMode": [
-      "Ctrl + wT"
+      "^wT"
     ],
     "insertMode": [],
     "visualMode": [],
@@ -2038,7 +1998,7 @@ let data = {
   },
   {
     "sections": [
-      "Tabs"
+      "tabs"
     ],
     "description": "Move to the next tab",
     "normalMode": [
@@ -2052,7 +2012,7 @@ let data = {
   },
   {
     "sections": [
-      "Tabs"
+      "tabs"
     ],
     "description": "Move to the previous tab",
     "normalMode": [
@@ -2066,7 +2026,7 @@ let data = {
   },
   {
     "sections": [
-      "Tabs"
+      "tabs"
     ],
     "description": "Move to tab number #",
     "normalMode": [
@@ -2079,7 +2039,7 @@ let data = {
   },
   {
     "sections": [
-      "Tabs"
+      "tabs"
     ],
     "description": "Move current tab to the #th position (indexed from 0)",
     "normalMode": [
@@ -2093,7 +2053,7 @@ let data = {
   },
   {
     "sections": [
-      "Tabs"
+      "tabs"
     ],
     "description": "Close the current tab and all its windows",
     "normalMode": [
@@ -2107,7 +2067,7 @@ let data = {
   },
   {
     "sections": [
-      "Tabs"
+      "tabs"
     ],
     "description": "Close all tabs except for the current one",
     "normalMode": [
@@ -2121,7 +2081,7 @@ let data = {
   },
   {
     "sections": [
-      "Tabs"
+      "tabs"
     ],
     "description": "Run the command on all tabs (e.g. :tabdo q - closes all opened tabs)",
     "normalMode": [
