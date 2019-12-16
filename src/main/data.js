@@ -1336,7 +1336,18 @@ let data = {
     ],
     "insertMode": [],
     "visualMode": [],
-    "exCommand": [":],
+    "exCommand": [],
+    "visualInsertMode": []
+  },
+  {
+    "sections": [
+      "editing", "registers"
+    ],
+    "description": "Copy from line x to line y and paste at line z (use . for current line)",
+    "normalMode": [],
+    "insertMode": [],
+    "visualMode": [],
+    "exCommand": [":x,ytz"],
     "visualInsertMode": []
   },
   {
