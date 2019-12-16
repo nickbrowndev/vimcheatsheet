@@ -1328,27 +1328,27 @@ let data = {
   },
   {
     "sections": [
-      "editing"
+      "editing", "registers"
     ],
-    "description": "Yank (copy) marked text",
+    "description": "Yank (copy) marked text (into unnamed register)",
     "normalMode": [
       "y"
     ],
     "insertMode": [],
     "visualMode": [],
-    "exCommand": [],
+    "exCommand": [":],
     "visualInsertMode": []
   },
   {
     "sections": [
       "editing"
     ],
-    "description": "Delete marked text",
+    "description": "Delete text",
     "normalMode": [
-      "d"
+      "d<movement>"
     ],
-    "insertMode": [],
-    "visualMode": [],
+    "insertMode": ["Backspace", "Delete"],
+    "visualMode": ["d"],
     "exCommand": [],
     "visualInsertMode": []
   },
@@ -1438,7 +1438,44 @@ let data = {
     "normalMode": [
       "\"xp"
     ],
+    "insertMode": ["^rx"],
+    "visualMode": [],
+    "exCommand": [],
+    "visualInsertMode": []
+  },
+  {
+    "sections": [
+      "registers"
+    ],
+    "description": "Yank into system clipboard",
+    "normalMode": [],
     "insertMode": [],
+    "visualMode": ["\"+y"],
+    "exCommand": [],
+    "visualInsertMode": []
+  },
+  {
+    "sections": [
+      "registers"
+    ],
+    "description": "Paste contents of system clipboard",
+    "normalMode": [
+      "\"+p"
+    ],
+    "insertMode": ["^r+"],
+    "visualMode": [],
+    "exCommand": [],
+    "visualInsertMode": []
+  },
+  {
+    "sections": [
+      "registers"
+    ],
+    "description": "Paste contents of Vim unnamed register (yanked text)",
+    "normalMode": [
+      "\"xp"
+    ],
+    "insertMode": ["^r""],
     "visualMode": [],
     "exCommand": [],
     "visualInsertMode": []
