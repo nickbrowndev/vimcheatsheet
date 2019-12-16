@@ -1486,7 +1486,7 @@ let data = {
     "normalMode": [
       "\"xp"
     ],
-    "insertMode": ["^r""],
+    "insertMode": ["^r\""],
     "visualMode": [],
     "exCommand": [],
     "visualInsertMode": []
