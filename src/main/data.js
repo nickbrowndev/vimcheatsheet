@@ -223,6 +223,20 @@ let data = {
   },
   {
     "sections": [
+      "help"
+    ],
+    "description": "Navigate help results",
+    "normalMode": [
+    ],
+    "insertMode": [],
+    "visualMode": [],
+    "exCommand": [
+      ":cnext", ":cprev", ":cnfile", ":cpfile"
+    ],
+    "visualInsertMode": []
+  },
+  {
+    "sections": [
       "buffers"
     ],
     "description": "Save file as",
