@@ -1,6 +1,68 @@
 $(function() {
     displayData(data);  
+
+    $("#searchInput").on("keyup", debounce(e => {
+        var searchValue = $("#searchInput").val();
+
+        clearSearchResults();
+        var matches;
+        if (searchValue) {
+            matches = performDescriptionSearch(searchValue);
+            displaySearchResults(matches);
+        }
+
+    }, 500));
+
+    $("#searchInput").on("change", () => {
+
+        var searchValue = $("#searchInput").val();
+        if (!searchValue) {
+            clearSearchResults();
+        }
+    });
+
+    $("#clearSearchInput").on("click", clearSearchInput);
 });
+
+function performDescriptionSearch(descriptionValue) {
+    const searchValue = descriptionValue.toLowerCase();
+
+    var matches = data.content.filter((value) => {
+        const valueDescription = value.description;
+        return value.description.toLowerCase().includes(searchValue); 
+    });
+
+    return matches;
+}
+
+function clearSearchInput() {
+    $("#searchInput").val("").trigger("change");
+}
+
+function clearSearchResults() {
+    $("#searchResults").empty();
+}
+
+function displaySearchResults(matches) {
+    const $searchResultsList = $("#searchResults");
+    if (matches && matches.length) {
+        var contentList = matches.map((value) => {
+            return $("<li>").append(createContentDisplay(value));
+        });
+
+        $searchResultsList.append(contentList);
+    } else {
+        $searchResultsList.append($("<li>No results</li>"));
+    }
+}
+
+function debounce(callback, wait) {
+  let timeout;
+  return (...args) => {
+      clearTimeout(timeout);
+      timeout = setTimeout(function () { callback.apply(this, args); }, wait);
+  };
+}
 
 function clearData() {
     const $nav = $("#index").empty();
@@ -42,18 +104,23 @@ function displayData(data) {
     $nav.append($navList);
 
     $.each(data.content, (key, content) => {
-        const $content = $("<div/>")
-            .attr("class", "bindingContainer");
-        $content.append($("<div/>")
-            .attr("class", "functionDescription")
-            .text(content.description));
-        $content.append(displayBinding(content.normalMode));
-        $content.append(displayBinding(content.insertMode));
-        $content.append(displayBinding(content.exCommand));
-        $content.append(displayBinding(content.visualMode));
-        //$content.append(displayBinding(content.visualInsertMode));
+        var $content = createContentDisplay(content);
         appendToSections(content.sections, $content);
     })
+}
+
+function createContentDisplay(content) {
+    const $content = $("<div/>")
+        .attr("class", "bindingContainer");
+    $content.append($("<div/>")
+        .attr("class", "functionDescription")
+        .text(content.description));
+    $content.append(displayBinding(content.normalMode));
+    $content.append(displayBinding(content.insertMode));
+    $content.append(displayBinding(content.exCommand));
+    $content.append(displayBinding(content.visualMode));
+    //$content.append(displayBinding(content.visualInsertMode));
+    return $content;
 }
 
 function generateListContent(key, section) {
@@ -114,3 +181,4 @@ function appendToSections(sections, $content) {
         }) 
     }
 }
+
