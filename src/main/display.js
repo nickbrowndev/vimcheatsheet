@@ -21,6 +21,8 @@ $(function() {
         }
     });
 
+    $("#downloadData").on("click", downloadData);
+
     $("#clearSearchInput").on("click", clearSearchInput);
 
     $("#showCreateDialog").on("click", showCreateDialog);
@@ -74,6 +76,18 @@ function saveCreateDialog() {
 
 function cancelCreateDialog() {
 
+}
+
+function downloadData() {
+  const filename = "data.js";
+  const indenting = 2;
+  const dataFileText = "let data = " + JSON.stringify(data, null, indenting) + ";";  
+  const a = document.createElement('a') // Create "a" element
+  const blob = new Blob([dataFileText], {type: "text/plain"}) // Create a blob (file-like object)
+  const url = URL.createObjectURL(blob) // Create an object URL from blob
+  a.setAttribute('href', url) // Set "a" element link
+  a.setAttribute('download', filename) // Set download filename
+  a.click() // Start downloading
 }
 
 function performDescriptionSearch(descriptionValue) {
