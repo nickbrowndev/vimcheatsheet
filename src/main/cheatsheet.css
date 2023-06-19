@@ -114,3 +114,18 @@ body {
     margin: 2px 5px;
     white-space: nowrap;
 }
+
+#createDialog {
+}
+
+#createDialog div#formFields {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25em;
+    margin-bottom: 2em;
+}
+
+#createDialog label {
+    display: flex;
+    justify-content: space-between;
+}

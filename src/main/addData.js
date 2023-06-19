@@ -63,28 +63,32 @@ function d() {
 }
 
 function n() {
-    let mapping = {normalMode: Array.from(arguments)};
+    let mapping = {normalMode: Array.from(arguments).filter(filterValue)};
     return mapping;
 }
 
 function i() {
-    let mapping = {insertMode: Array.from(arguments)};
+    let mapping = {insertMode: Array.from(arguments).filter(filterValue)};
     return mapping;
 }
 
 function v() {
-    let mapping = {visualMode: Array.from(arguments)};
+    let mapping = {visualMode: Array.from(arguments).filter(filterValue)};
     return mapping;
 }
 
 function ex() {
-    let mapping = {exCommand: Array.from(arguments)};
+    let mapping = {exCommand: Array.from(arguments).filter(filterValue)};
     return mapping;
 }
 
 function vi() {
-    let mapping = {visualInsertMode: Array.from(arguments)};
+    let mapping = {visualInsertMode: Array.from(arguments).filter(filterValue)};
     return mapping;
+}
+
+function filterValue(value) {
+    return value ? true : false;
 }
 
 function binding() {

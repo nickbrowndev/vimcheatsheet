@@ -11,8 +11,14 @@
     </head>
     <body>
         <h1>Nick's Vim Cheatsheet</h1>
+        <p>
+        <button id="showCreateDialog">
+            <i class="fa-solid fa-plus"></i>
+            Add new binding
+        </button>
+        </p>
         <div id="search">
-            <input id="searchInput" name="searchInput" size="30"/>
+            <input id="searchInput" name="searchInput" size="30" autofocus/>
             <button id="clearSearchInput">
                 <i class="fa-solid fa-eraser"></i>
             </button>
@@ -36,5 +42,48 @@
                     <li><a href="https://gist.github.com/0xadada/1ea7f96d108dcfbe75c9">Github Cheatsheet TODO</a></li>
             </section>
         </div>
+        <dialog id="createDialog">
+            <form method="dialog">
+                <div id="formFields">
+                <label>
+                    Description:
+                    <input id="description" type="text" length="40"/>
+                </label>
+                <label>
+                    Sections
+                    <select id="sections" multiple="true'>
+                        <option value="default">Choose…</option>
+                        <option>Brine shrimp</option>
+                        <option>Red panda</option>
+                        <option>Spider monkey</option>
+                    </select>
+                </label>
+                <label>
+                    Normal Mode:
+                    <input id="normalModeBinding" type="text" length="20"/>
+                </label>
+                <label>
+                    Insert Mode:
+                    <input id="insertModeBinding" type="text" length="20"/>
+                </label>
+                <label>
+                    Visual Mode:
+                    <input id="visualModeBinding" type="text" length="20"/>
+                </label>
+                <label>
+                    Ex Command Mode:
+                    <input id="exCommandModeBinding" type="text" length="20"/>
+                </label>
+                <label>
+                    Visual Insert Mode:
+                    <input id="visualInsertModeBinding" type="text" length="20"/>
+                </label>
+                </div>
+                <div>
+                    <button id="cancel" value="cancel">Cancel</button>
+                    <button id="save" value="save">Confirm</button>
+                </div>
+            </form>
+        </dialog>
     </body>
 </html>

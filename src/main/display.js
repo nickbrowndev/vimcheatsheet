@@ -22,7 +22,59 @@ $(function() {
     });
 
     $("#clearSearchInput").on("click", clearSearchInput);
+
+    $("#showCreateDialog").on("click", showCreateDialog);
+
+    $("#createDialog").on("close", (e) => {
+        var returnValue = e.currentTarget.returnValue;
+
+        if (returnValue == "save") {
+            saveCreateDialog();
+        } else if (returnValue == "cancel") {
+            cancelCreateDialog();
+        }
+    });
 });
+
+function showCreateDialog(e) {
+    const sectionIdList = Object.keys(data.sections);
+    const $createDialog = $("#createDialog");
+
+    const $createDialogSectionInput = $createDialog.find("#sections");
+
+    $createDialogSectionInput.empty();
+    sectionIdList.forEach(sectionId => {
+        const section = data.sections[sectionId];
+        $createDialogSectionInput.append($("<option>")
+            .attr("value", sectionId)
+            .html(section.title));
+    });
+
+    $createDialog[0].showModal();
+    
+    
+}
+
+function saveCreateDialog() {
+    const $createDialog = $("#createDialog");
+    const description = $createDialog.find("#description").val();
+    const sections = $createDialog.find("#sections").val();
+    const normalBinding = $createDialog.find("#normalModeBinding").val();
+    const insertBinding = $createDialog.find("#insertModeBinding").val();
+    const visualBinding = $createDialog.find("#visualModeBinding").val();
+    const exCommandBinding = $createDialog.find("#exCommandModeBinding").val();
+    const visualInsertBinding = $createDialog.find("#visualInsertModeBinding").val();
+
+        if (description && sections && sections.length 
+            && (normalBinding || insertBinding || visualBinding || exCommandBinding || visualInsertBinding)) {
+
+        add(binding(s(...sections),d(description),n(normalBinding),i(insertBinding),v(visualBinding),ex(exCommandBinding),vi(visualInsertBinding)));
+    }
+}
+
+function cancelCreateDialog() {
+
+}
 
 function performDescriptionSearch(descriptionValue) {
     const searchValue = descriptionValue.toLowerCase();
