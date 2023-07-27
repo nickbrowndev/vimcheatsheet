@@ -2093,6 +2093,33 @@ let data = {
     },
     {
       "sections": [
+        "buffers",
+        "windows"
+      ],
+      "description": "Close other buffers",
+      "normalMode": ["<c-w>o"],
+      "insertMode": [],
+      "visualMode": [],
+      "exCommand": [
+        ":only"
+      ],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
+        "buffers"
+      ],
+      "description": "Run a command on all buffers",
+      "normalMode": ["<c-w>o"],
+      "insertMode": [],
+      "visualMode": [],
+      "exCommand": [
+        ":bufdo"
+      ],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
         "buffers"
       ],
       "description": "List all open buffers",
