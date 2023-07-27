@@ -1854,7 +1854,9 @@ let data = {
     },
     {
       "sections": [
-        "files"
+        "files",
+        "windows",
+        "buffers"
       ],
       "description": "Quit and throw away unsaved changes",
       "normalMode": [
@@ -1869,7 +1871,24 @@ let data = {
     },
     {
       "sections": [
-        "files"
+        "files",
+        "windows",
+        "buffers"
+      ],
+      "description": "Quit all tabs without saving",
+      "normalMode": ["ZX"],
+      "insertMode": [],
+      "visualMode": [],
+      "exCommand": [
+        ":qa!"
+      ],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
+        "files",
+        "windows",
+        "buffers"
       ],
       "description": "Write (save) and quit on all tabs",
       "normalMode": [],
