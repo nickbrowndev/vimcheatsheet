@@ -32,12 +32,21 @@ let data = {
       "text": "Learn some help stuff, innit",
       "link": "https://vim.fandom.com/wiki/Learn_to_use_help"
     },
+    "files": {
+      "title": "Files"
+    },
     "buffers": {
-      "title": "Buffers"
+      "title": "Buffers",
+      "parent": "files"
     },
     "windows": {
       "title": "Windows"
+      "parent": "files"
     },
+    "tabs": {
+      "title": "Tabs",
+      "parent": "files"
+    }
     "registers": {
       "title": "Registers"
     },
@@ -72,9 +81,6 @@ let data = {
     "visualMode": {
       "title": "Selecting Text"
     },
-    "files": {
-      "title": "Files"
-    },
     "break": {
       "title": "BREAK"
     },
@@ -83,9 +89,6 @@ let data = {
     },
     "searchInMultipleFiles": {
       "title": "Search in Multiple Files"
-    },
-    "tabs": {
-      "title": "Tabs"
     }
   },
   "content": [
@@ -1366,6 +1369,34 @@ let data = {
       "visualMode": [
         "<"
       ],
+      "exCommand": [],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
+        "formatting"
+      ],
+      "description": "Indent line. Can be combined with motions",
+      "normalMode": [
+        "=",
+      ],
+      "insertMode": [],
+      "visualMode": [
+        "="
+      ],
+      "exCommand": [],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
+        "formatting"
+      ],
+      "description": "Indent whole file",
+      "normalMode": [
+        "=G",
+      ],
+      "insertMode": [],
+      "visualMode": [],
       "exCommand": [],
       "visualInsertMode": []
     },
