@@ -62,14 +62,20 @@ let data = {
       "parent": "motions",
       "title": "Vertical"
     },
-    "inserting": {
-      "title": "Inserting"
-    },
     "editing": {
       "title": "Editing"
     },
+    "inserting": {
+      "title": "Inserting",
+      "parent": "editing"
+    },
+    "inserting": {
+      "title": "Pasting",
+      "parent": "editing"
+    },
     "formatting": {
       "title": "Formatting",
+      "parent": "editing",
       "text": ":h gq, :h gw, :h fo (format options), :h fp (format program), :h fo-table"
     },
     "marks": {
@@ -1735,20 +1741,20 @@ let data = {
     },
     {
       "sections": [
-        "editing"
+        "editing", "pasting"
       ],
       "description": "Put (paste) the clipboard after cursor",
       "normalMode": [
         "p"
       ],
-      "insertMode": [],
-      "visualMode": [],
+      "insertMode": ["<C-r>0"],
+      "visualMode": ["p"],
       "exCommand": [],
       "visualInsertMode": []
     },
     {
       "sections": [
-        "editing"
+        "editing", "pasting"
       ],
       "description": "Put (paste) before cursor",
       "normalMode": [
@@ -1757,6 +1763,41 @@ let data = {
       "insertMode": [],
       "visualMode": [],
       "exCommand": [],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
+        "editing", "pasting"
+      ],
+      "description": "Put (paste) before cursor",
+      "normalMode": [
+        "P"
+      ],
+      "insertMode": [],
+      "visualMode": [],
+      "exCommand": [],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
+        "editing", "pasting"
+      ],
+      "description": "Put (paste) onto line from register <r>",
+      "normalMode": [],
+      "insertMode": [],
+      "visualMode": [],
+      "exCommand": [":put <r>"],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
+        "editing", "pasting"
+      ],
+      "description": "Put (paste) onto line <n> from register <r>",
+      "normalMode": [],
+      "insertMode": [],
+      "visualMode": [],
+      "exCommand": [":<n>put <r>"],
       "visualInsertMode": []
     },
     {
