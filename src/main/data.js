@@ -32,11 +32,20 @@ let data = {
       "text": "Learn some help stuff, innit",
       "link": "https://vim.fandom.com/wiki/Learn_to_use_help"
     },
+    "files": {
+      "title": "Files"
+    },
     "buffers": {
-      "title": "Buffers"
+      "title": "Buffers",
+      "parent": "files"
     },
     "windows": {
-      "title": "Windows"
+      "title": "Windows",
+      "parent": "files"
+    },
+    "tabs": {
+      "title": "Tabs",
+      "parent": "files"
     },
     "registers": {
       "title": "Registers"
@@ -53,27 +62,32 @@ let data = {
       "parent": "motions",
       "title": "Vertical"
     },
-    "inserting": {
-      "title": "Inserting"
-    },
     "editing": {
       "title": "Editing"
     },
+    "inserting": {
+      "title": "Inserting",
+      "parent": "editing"
+    },
+    "inserting": {
+      "title": "Pasting",
+      "parent": "editing"
+    },
     "formatting": {
       "title": "Formatting",
+      "parent": "editing",
       "text": ":h gq, :h gw, :h fo (format options), :h fp (format program), :h fo-table"
     },
     "marks": {
-      "title": "Marks"
+      "title": "Marks",
+      "text": "Tip: To jump to a mark you can either use a backtick (\`) or an apostrophe (\'). Using an apostrophe jumps to the beginning (first non-blank) of the line holding the mark."
     },
     "macros": {
       "title": "Macros"
     },
     "visualMode": {
-      "title": "Selecting Text"
-    },
-    "files": {
-      "title": "Files"
+      "title": "Selecting Text",
+      "text": "There are three (sub)types of the visual modes which are visual, block-visual , and linewise-visual"
     },
     "break": {
       "title": "BREAK"
@@ -83,9 +97,6 @@ let data = {
     },
     "searchInMultipleFiles": {
       "title": "Search in Multiple Files"
-    },
-    "tabs": {
-      "title": "Tabs"
     }
   },
   "content": [
@@ -173,7 +184,7 @@ let data = {
       ],
       "description": "Move screen down one line [n lines]",
       "normalMode": [
-        "[n]^e"
+        "[n]<C-e>"
       ],
       "insertMode": [],
       "visualMode": [],
@@ -186,7 +197,7 @@ let data = {
       ],
       "description": "Move screen up half a screen",
       "normalMode": [
-        "^u"
+        "<C-u>"
       ],
       "insertMode": [],
       "visualMode": [],
@@ -255,7 +266,7 @@ let data = {
       ],
       "description": "Close current pane [force]",
       "normalMode": [
-        "^wc"
+        "<C-w>c"
       ],
       "insertMode": [],
       "visualMode": [],
@@ -818,7 +829,7 @@ let data = {
       ],
       "description": "Move screen down one line (without moving cursor)",
       "normalMode": [
-        "^e"
+        "<C-e>"
       ],
       "insertMode": [],
       "visualMode": [],
@@ -831,7 +842,7 @@ let data = {
       ],
       "description": "Move screen up one line (without moving cursor)",
       "normalMode": [
-        "^y"
+        "<C-y>"
       ],
       "insertMode": [],
       "visualMode": [],
@@ -845,7 +856,7 @@ let data = {
       ],
       "description": "Move backward one full screen",
       "normalMode": [
-        "^b"
+        "<C-b>"
       ],
       "insertMode": [],
       "visualMode": [],
@@ -859,7 +870,7 @@ let data = {
       ],
       "description": "Move forward one full screen",
       "normalMode": [
-        "^f"
+        "<C-f>"
       ],
       "insertMode": [],
       "visualMode": [],
@@ -873,7 +884,7 @@ let data = {
       ],
       "description": "Move forward 1/2 a screen",
       "normalMode": [
-        "^d"
+        "<C-d>"
       ],
       "insertMode": [],
       "visualMode": [],
@@ -887,7 +898,7 @@ let data = {
       ],
       "description": "Move back 1/2 a screen",
       "normalMode": [
-        "^u"
+        "<C-u>"
       ],
       "insertMode": [],
       "visualMode": [],
@@ -954,7 +965,7 @@ let data = {
       "normalMode": [
         "o"
       ],
-      "insertMode": [],
+      "insertMode": ["<enter>","<C-h>"],
       "visualMode": [],
       "exCommand": [],
       "visualInsertMode": []
@@ -993,8 +1004,8 @@ let data = {
       "link": "https://vim.fandom.com/wiki/Avoid_the_escape_key",
       "normalMode": [
         "Esc",
-        "^[",
-        "^c"
+        "<C-[>",
+        "<C-c>"
       ],
       "insertMode": [],
       "visualMode": [],
@@ -1176,7 +1187,7 @@ let data = {
       ],
       "description": "Redo",
       "normalMode": [
-        "^r"
+        "<C-r>"
       ],
       "insertMode": [],
       "visualMode": [],
@@ -1241,7 +1252,7 @@ let data = {
       ],
       "description": "Start visual block mode",
       "normalMode": [
-        "^v"
+        "<C-v>"
       ],
       "insertMode": [],
       "visualMode": [],
@@ -1371,6 +1382,34 @@ let data = {
     },
     {
       "sections": [
+        "formatting"
+      ],
+      "description": "Indent line. Can be combined with motions",
+      "normalMode": [
+        "=",
+      ],
+      "insertMode": [],
+      "visualMode": [
+        "="
+      ],
+      "exCommand": [],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
+        "formatting"
+      ],
+      "description": "Indent whole file",
+      "normalMode": [
+        "=G",
+      ],
+      "insertMode": [],
+      "visualMode": [],
+      "exCommand": [],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
         "editing",
         "registers"
       ],
@@ -1406,12 +1445,28 @@ let data = {
         "d<movement>"
       ],
       "insertMode": [
-        "Backspace",
+        "<Backspace>",
         "Delete"
       ],
       "visualMode": [
         "d"
       ],
+      "exCommand": [],
+      "visualInsertMode": []
+    },    
+    {
+      "sections": [
+        "editing"
+      ],
+      "description": "Delete character before cursor",
+      "normalMode": [
+        "X"
+      ],
+      "insertMode": [
+        "<Backspace>",
+        "<C-h>"
+      ],
+      "visualMode": [],
       "exCommand": [],
       "visualInsertMode": []
     },
@@ -1510,7 +1565,7 @@ let data = {
         "\"xp"
       ],
       "insertMode": [
-        "^rx"
+        "<C-r>x"
       ],
       "visualMode": [],
       "exCommand": [],
@@ -1538,7 +1593,7 @@ let data = {
         "\"+p"
       ],
       "insertMode": [
-        "^r+"
+        "<C-r>+"
       ],
       "visualMode": [],
       "exCommand": [],
@@ -1553,7 +1608,7 @@ let data = {
         "\"xp"
       ],
       "insertMode": [
-        "^r\""
+        "<C-r>\""
       ],
       "visualMode": [],
       "exCommand": [],
@@ -1704,11 +1759,24 @@ let data = {
     },
     {
       "sections": [
-        "editing"
+        "editing", "pasting"
       ],
       "description": "Put (paste) the clipboard after cursor",
       "normalMode": [
         "p"
+      ],
+      "insertMode": ["<C-r>0"],
+      "visualMode": ["p"],
+      "exCommand": [],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
+        "editing", "pasting"
+      ],
+      "description": "Put (paste) before cursor",
+      "normalMode": [
+        "P"
       ],
       "insertMode": [],
       "visualMode": [],
@@ -1717,12 +1785,45 @@ let data = {
     },
     {
       "sections": [
-        "editing"
+        "editing", "pasting"
       ],
       "description": "Put (paste) before cursor",
       "normalMode": [
         "P"
       ],
+      "insertMode": [],
+      "visualMode": [],
+      "exCommand": [],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
+        "editing", "pasting"
+      ],
+      "description": "Put (paste) onto line from register <r>",
+      "normalMode": [],
+      "insertMode": [],
+      "visualMode": [],
+      "exCommand": [":put <r>"],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
+        "editing", "pasting"
+      ],
+      "description": "Put (paste) onto line <n> from register <r>",
+      "normalMode": [],
+      "insertMode": [],
+      "visualMode": [],
+      "exCommand": [":<n>put <r>"],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
+        "editing", "pasting"
+      ],
+      "description": "Put (paste) onto line and indent",
+      "normalMode": ["]p"],
       "insertMode": [],
       "visualMode": [],
       "exCommand": [],
@@ -1763,7 +1864,7 @@ let data = {
         "db"
       ],
       "insertMode": [
-        "^w"
+        "<C-w>"
       ],
       "visualMode": [],
       "exCommand": [],
@@ -1854,7 +1955,9 @@ let data = {
     },
     {
       "sections": [
-        "files"
+        "files",
+        "windows",
+        "buffers"
       ],
       "description": "Quit and throw away unsaved changes",
       "normalMode": [
@@ -1869,7 +1972,24 @@ let data = {
     },
     {
       "sections": [
-        "files"
+        "files",
+        "windows",
+        "buffers"
+      ],
+      "description": "Quit all tabs without saving",
+      "normalMode": ["ZX"],
+      "insertMode": [],
+      "visualMode": [],
+      "exCommand": [
+        ":qa!"
+      ],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
+        "files",
+        "windows",
+        "buffers"
       ],
       "description": "Write (save) and quit on all tabs",
       "normalMode": [],
@@ -2093,6 +2213,33 @@ let data = {
     },
     {
       "sections": [
+        "buffers",
+        "windows"
+      ],
+      "description": "Close other buffers",
+      "normalMode": ["<C-w>o"],
+      "insertMode": [],
+      "visualMode": [],
+      "exCommand": [
+        ":only"
+      ],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
+        "buffers"
+      ],
+      "description": "Run a command on all buffers",
+      "normalMode": ["<C-w>o"],
+      "insertMode": [],
+      "visualMode": [],
+      "exCommand": [
+        ":bufdo"
+      ],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
         "buffers"
       ],
       "description": "List all open buffers",
@@ -2124,7 +2271,7 @@ let data = {
       ],
       "description": "Split window",
       "normalMode": [
-        "^ws"
+        "<C-w>s"
       ],
       "insertMode": [],
       "visualMode": [],
@@ -2137,7 +2284,7 @@ let data = {
       ],
       "description": "Switch windows",
       "normalMode": [
-        "^ww"
+        "<C-w>w"
       ],
       "insertMode": [],
       "visualMode": [],
@@ -2150,7 +2297,7 @@ let data = {
       ],
       "description": "Split window vertically",
       "normalMode": [
-        "^wv"
+        "<C-w>v"
       ],
       "insertMode": [],
       "visualMode": [],
@@ -2163,7 +2310,7 @@ let data = {
       ],
       "description": "Move cursor to the left window (vertical split)",
       "normalMode": [
-        "^wh"
+        "<C-w>h"
       ],
       "insertMode": [],
       "visualMode": [],
@@ -2176,7 +2323,7 @@ let data = {
       ],
       "description": "Move cursor to the right window (vertical split)",
       "normalMode": [
-        "^wl"
+        "<C-w>l"
       ],
       "insertMode": [],
       "visualMode": [],
@@ -2189,7 +2336,7 @@ let data = {
       ],
       "description": "Move cursor to the window below (horizontal split)",
       "normalMode": [
-        "^wj"
+        "<C-w>j"
       ],
       "insertMode": [],
       "visualMode": [],
@@ -2202,7 +2349,7 @@ let data = {
       ],
       "description": "Move cursor to the window above (horizontal split)",
       "normalMode": [
-        "^wk"
+        "<C-w>k"
       ],
       "insertMode": [],
       "visualMode": [],
@@ -2230,7 +2377,7 @@ let data = {
       ],
       "description": "Move the current split window into its own tab",
       "normalMode": [
-        "^wT"
+        "<C-w>T"
       ],
       "insertMode": [],
       "visualMode": [],
