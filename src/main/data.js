@@ -20,17 +20,29 @@ let data = {
       "parent": "movement",
       "title": "Screen Scrolling"
     },
-    "linewiseSearching": {
-      "title": "Linewise Searching"
-    },
     "searchReplace": {
       "title": "Search and Replace",
       "link": "https://vim.fandom.com/wiki/Searching"
+    },
+    "linewiseSearching": {
+        "title": "Linewise Searching",
+        "parent": "searchReplace"
+     },
+    "searchInBuffer": {
+      "title": "Search in Buffer",
+      "parent": "searchReplace"
+    },
+    "searchInMultipleFiles": {
+      "title": "Search in Multiple Files",
+      "parent": "searchReplace"
     },
     "help": {
       "title": "Help",
       "text": "Learn some help stuff, innit",
       "link": "https://vim.fandom.com/wiki/Learn_to_use_help"
+    },
+    "externalTools": {
+      "title": "External Tools",
     },
     "files": {
       "title": "Files"
@@ -82,6 +94,13 @@ let data = {
       "title": "Marks",
       "text": "Tip: To jump to a mark you can either use a backtick (\`) or an apostrophe (\'). Using an apostrophe jumps to the beginning (first non-blank) of the line holding the mark."
     },
+    "jumpsChanges": {
+      "title": "Jump and Change List",
+    },
+    "folding": {
+      "title": "Folding",
+      "text": "Tip The commands for folding (e.g. za) operate on one level. To operate on all levels, use uppercase letters (e.g. zA)."
+    },
     "macros": {
       "title": "Macros"
     },
@@ -89,15 +108,12 @@ let data = {
       "title": "Selecting Text",
       "text": "There are three (sub)types of the visual modes which are visual, block-visual , and linewise-visual"
     },
-    "break": {
-      "title": "BREAK"
+    "diff": {
+      "title": "Diff"
     },
-    "searchAndReplace": {
-      "title": "Search and replace"
+    "spelling": {
+      "title": "Spelling and Dictionary"
     },
-    "searchInMultipleFiles": {
-      "title": "Search in Multiple Files"
-    }
   },
   "content": [
     {
@@ -627,7 +643,7 @@ let data = {
     },
     {
       "sections": [
-        "searchReplace"
+        "searchInBuffer"
       ],
       "description": "List all lines containing pattern",
       "normalMode": [],
@@ -1224,6 +1240,19 @@ let data = {
       "sections": [
         "visualMode"
       ],
+      "description": "Reselect block",
+      "normalMode": [
+        "gv"
+      ],
+      "insertMode": [],
+      "visualMode": [],
+      "exCommand": [],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
+        "visualMode"
+      ],
       "description": "Start linewise visual mode",
       "normalMode": [
         "V"
@@ -1358,7 +1387,7 @@ let data = {
       "normalMode": [
         ">>"
       ],
-      "insertMode": [],
+      "insertMode": ["<C-t>"],
       "visualMode": [
         ">"
       ],
@@ -1373,7 +1402,7 @@ let data = {
       "normalMode": [
         "<<"
       ],
-      "insertMode": [],
+      "insertMode": ["<C-d>"],
       "visualMode": [
         "<"
       ],
@@ -1392,6 +1421,19 @@ let data = {
       "visualMode": [
         "="
       ],
+      "exCommand": [],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
+        "formatting"
+      ],
+      "description": "Reformat paragraph",
+      "normalMode": [
+        "gq<motion>",
+      ],
+      "insertMode": [],
+      "visualMode": [],
       "exCommand": [],
       "visualInsertMode": []
     },
@@ -1668,6 +1710,124 @@ let data = {
     },
     {
       "sections": [
+        "marks"
+      ],
+      "description": "Go to the position when Vim was last exited",
+      "normalMode": [
+        "`0"
+      ],
+      "insertMode": [],
+      "visualMode": [],
+      "exCommand": [],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
+        "marks"
+      ],
+      "description": "Go to the position when last editing this file",
+      "normalMode": [
+        "`\""
+      ],
+      "insertMode": [],
+      "visualMode": [],
+      "exCommand": [],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
+        "marks"
+      ],
+      "description": "Go to the position of the last change in this file",
+      "normalMode": [
+        "`."
+      ],
+      "insertMode": [],
+      "visualMode": [],
+      "exCommand": [],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
+        "marks"
+      ],
+      "description": "Go to the position before the last jump",
+      "normalMode": [
+        "``"
+      ],
+      "insertMode": [],
+      "visualMode": [],
+      "exCommand": [],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
+        "jumpsChanges"
+      ],
+      "description": "Show Jump List",
+      "normalMode": [],
+      "insertMode": [],
+      "visualMode": [],
+      "exCommand": [":ju", ":jumps"],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
+        "jumpsChanges"
+      ],
+      "description": "Go to newer position in Jump List",
+      "normalMode": ["<C-i>"],
+      "insertMode": [],
+      "visualMode": [],
+      "exCommand": [],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
+        "jumpsChanges"
+      ],
+      "description": "Go to older position in Jump List",
+      "normalMode": ["<C-o>"],
+      "insertMode": [],
+      "visualMode": [],
+      "exCommand": [],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
+        "jumpsChanges"
+      ],
+      "description": "Show Change List",
+      "normalMode": [],
+      "insertMode": [],
+      "visualMode": [],
+      "exCommand": [":changes"],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
+        "jumpsChanges"
+      ],
+      "description": "Go to newer position in Change List",
+      "normalMode": ["g,"],
+      "insertMode": [],
+      "visualMode": [],
+      "exCommand": [],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
+        "jumpsChanges"
+      ],
+      "description": "Go to older position in Change List",
+      "normalMode": ["g;"],
+      "insertMode": [],
+      "visualMode": [],
+      "exCommand": [],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
         "macros"
       ],
       "description": "Record macro a",
@@ -1761,9 +1921,22 @@ let data = {
       "sections": [
         "editing", "pasting"
       ],
-      "description": "Put (paste) the clipboard after cursor",
+      "description": "Put (paste) after cursor",
       "normalMode": [
         "p"
+      ],
+      "insertMode": ["<C-r>0"],
+      "visualMode": ["p"],
+      "exCommand": [],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
+        "editing", "pasting"
+      ],
+      "description": "Put (paste) after cursor and leave cursor after new text",
+      "normalMode": [
+        "gp"
       ],
       "insertMode": ["<C-r>0"],
       "visualMode": ["p"],
@@ -1777,6 +1950,19 @@ let data = {
       "description": "Put (paste) before cursor",
       "normalMode": [
         "P"
+      ],
+      "insertMode": [],
+      "visualMode": [],
+      "exCommand": [],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
+        "editing", "pasting"
+      ],
+      "description": "Put (paste) before cursor and leave cursor after the new text",
+      "normalMode": [
+        "gP"
       ],
       "insertMode": [],
       "visualMode": [],
@@ -1900,6 +2086,17 @@ let data = {
     },
     {
       "sections": [
+        "editing"
+      ],
+      "description": "Delete lines 3 to 5",
+      "normalMode": [],
+      "insertMode": [],
+      "visualMode": [],
+      "exCommand": [":3,5d"],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
         "files"
       ],
       "description": "Write (save) the file, but don't exit",
@@ -2002,7 +2199,7 @@ let data = {
     },
     {
       "sections": [
-        "searchAndReplace"
+        "searchInBuffer"
       ],
       "description": "Search for pattern",
       "normalMode": [
@@ -2015,7 +2212,7 @@ let data = {
     },
     {
       "sections": [
-        "searchAndReplace"
+        "searchInBuffer"
       ],
       "description": "Search backward for pattern",
       "normalMode": [
@@ -2028,7 +2225,7 @@ let data = {
     },
     {
       "sections": [
-        "searchAndReplace"
+        "searchInBuffer"
       ],
       "description": "'very magic' pattern: non-alphanumeric characters are interpreted as special regex symbols (no escaping needed)",
       "normalMode": [
@@ -2041,7 +2238,7 @@ let data = {
     },
     {
       "sections": [
-        "searchAndReplace"
+        "searchInBuffer"
       ],
       "description": "Repeat search in same direction",
       "normalMode": [
@@ -2054,7 +2251,7 @@ let data = {
     },
     {
       "sections": [
-        "searchAndReplace"
+        "searchInBuffer"
       ],
       "description": "Repeat search in opposite direction",
       "normalMode": [
@@ -2067,7 +2264,137 @@ let data = {
     },
     {
       "sections": [
-        "searchAndReplace"
+        "searchInBuffer"
+      ],
+      "description": "Go to first match",
+      "normalMode": [
+        "ggn", "Gn"
+      ],
+      "insertMode": [],
+      "visualMode": [],
+      "exCommand": [],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
+        "searchInBuffer"
+      ],
+      "description": "Go to last match",
+      "normalMode": [
+        "GN"
+      ],
+      "insertMode": [],
+      "visualMode": [],
+      "exCommand": [],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
+        "searchInBuffer"
+      ],
+      "description": "Search forwards for exact word under cursor",
+      "normalMode": [
+        "*", 
+      ],
+      "insertMode": [],
+      "visualMode": [],
+      "exCommand": [],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
+        "searchInBuffer"
+      ],
+      "description": "Search backwards for exact word under cursor",
+      "normalMode": [
+        "*", "#"
+      ],
+      "insertMode": [],
+      "visualMode": [],
+      "exCommand": [],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
+        "searchInBuffer"
+      ],
+      "description": "Search forwards for text under cursor (partial search)",
+      "normalMode": [
+        "g*",
+      ],
+      "insertMode": [],
+      "visualMode": [],
+      "exCommand": [],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
+        "searchInBuffer"
+      ],
+      "description": "Search backwards for text under cursor (partial search)",
+      "normalMode": [
+        "g#"
+      ],
+      "insertMode": [],
+      "visualMode": [],
+      "exCommand": [],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
+        "searchInBuffer"
+      ],
+      "description": "Go to local definition",
+      "normalMode": [
+        "gd"
+      ],
+      "insertMode": [],
+      "visualMode": [],
+      "exCommand": [],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
+        "searchInBuffer"
+      ],
+      "description": "Go to global definition",
+      "normalMode": [
+        "gD"
+      ],
+      "insertMode": [],
+      "visualMode": [],
+      "exCommand": [],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
+        "searchInBuffer"
+      ],
+      "description": "Show lines with matching word under cursor",
+      "normalMode": [
+        "[I"
+      ],
+      "insertMode": [],
+      "visualMode": [],
+      "exCommand": [],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
+        "searchInBuffer"
+      ],
+      "description": "Jump to tag under cursor",
+      "normalMode": [
+        "<C-]>"
+      ],
+      "insertMode": [],
+      "visualMode": [],
+      "exCommand": [],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
+        "searchInBuffer"
       ],
       "description": "Replace all old with new throughout file",
       "normalMode": [],
@@ -2080,7 +2407,7 @@ let data = {
     },
     {
       "sections": [
-        "searchAndReplace"
+        "searchInBuffer"
       ],
       "description": "Replace all old with new throughout file with confirmations",
       "normalMode": [],
@@ -2093,7 +2420,7 @@ let data = {
     },
     {
       "sections": [
-        "searchAndReplace"
+        "searchInBuffer"
       ],
       "description": "Remove highlighting of search matches",
       "normalMode": [],
@@ -2480,6 +2807,32 @@ let data = {
       "visualMode": [],
       "exCommand": [
         ":tabdo command"
+      ],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
+        "externalTools"
+      ],
+      "description": "Open a terminal window",
+      "normalMode": [],
+      "insertMode": [],
+      "visualMode": [],
+      "exCommand": [
+        ":ter", ":terminal"
+      ],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
+        "externalTools"
+      ],
+      "description": "Execute terminal command 'foo'",
+      "normalMode": [],
+      "insertMode": [],
+      "visualMode": [],
+      "exCommand": [
+        ":!foo",
       ],
       "visualInsertMode": []
     }
