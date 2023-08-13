@@ -2141,6 +2141,33 @@ let data = {
       "sections": [
         "files"
       ],
+      "description": "Write (save) the file to a different file, but remain in current file. Use ! to overwrite.",
+      "normalMode": [],
+      "insertMode": [],
+      "visualMode": [],
+      "exCommand": [
+        ":w[!] <filename>"
+      ],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
+        "files"
+      ],
+      "description": "Write (save) and open to new file in current buffer. Use ! to overwrite",
+      "normalMode": [
+      ],
+      "insertMode": [],
+      "visualMode": [],
+      "exCommand": [
+        ":sav[eas][!] <filename>"
+      ],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
+        "files"
+      ],
       "description": "Quit (fails if there are unsaved changes)",
       "normalMode": [],
       "insertMode": [],
