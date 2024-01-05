@@ -2512,6 +2512,19 @@ let data = {
     },
     {
       "sections": [
+        "files"
+      ],
+      "description": "Open a list of recent files",
+      "normalMode": [],
+      "insertMode": [],
+      "visualMode": [],
+      "exCommand": [
+        ":browse oldfiles", ":Telescope oldfiles \#Telescope"
+      ],
+      "visualInsertMode": []
+    },
+    {
+      "sections": [
         "files",
         "buffers"
       ],
